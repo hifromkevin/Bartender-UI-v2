@@ -8,6 +8,17 @@ import (
 	"github.com/gorilla/mux"
 )
 
+func enableCORS(next http.Handler) http.Handler {
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		w.Header().Set("Access-Control-Allow-Origin", "*") 
+		w.Header().Set("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
+		w.Header().Set("Access-Control-Allow-Headers", "Content-Type")
+		if r.Method == "OPTIONS" {
+			return
+		}
+		next.ServeHTTP(w, r)
+	})
+}
 
 func main() {
 	router := mux.NewRouter()
@@ -29,7 +40,7 @@ func main() {
 	}
 
 	log.Printf("Server started on :%s\n", port)
-	if err := http.ListenAndServe(":"+port, router); err != nil {
+	if err := http.ListenAndServe(":"+port, enableCORS(router)); err != nil {
 		log.Fatal("ListenAndServe:", err)
 	}
 }
