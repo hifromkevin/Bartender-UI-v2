@@ -1,0 +1,62 @@
+/***************
+ *   IMPORTS   *
+ ***************/
+
+@import url('https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..600;1,400..600&display=swap');
+
+:root {
+  --fontFamily: 'Afacad', sans-serif;
+
+  /**********
+    * Colors *
+    **********/
+  --black: #313131;
+  --white: #fcfcfc;
+  --lightGray: #cfcfcf;
+  --midGray: #a4a4a4;
+  --baseTeal: #5ed1c4;
+  --mutedTeal: #d3e2e1;
+
+  /**************
+    * Font Sizes *
+    **************/
+  --fontSize: 16px;
+  --font-xxs: 0.25rem;
+  --font-xs: 0.5rem;
+  --font-sm: 0.75rem;
+  --font-md: 1rem;
+  --font-lg: 1.5rem;
+  --font-xl: 3.5rem;
+
+  /****************
+    * Font Weights *
+    ****************/
+  --ultralight: 100;
+  --light: 200;
+  --regular: 300;
+
+  /******************
+    * Letter Spacing *
+    ******************/
+  --narrow-spacing: 0.12em;
+  --mid-spacing: 0.16em;
+  --wide-spacing: 0.2em;
+}
+
+/**********
+  * Resets *
+  **********/
+
+* {
+  margin: 0;
+  padding: 0;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-color: var(--black);
+  color: var(--white);
+  font-family: var(--fontFamily);
+  margin: 0;
+}

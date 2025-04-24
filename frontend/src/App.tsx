@@ -1,35 +1,24 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Stations from './features/Stations/Stations';
+import Cocktails from './features/Cocktails/Cocktails';
 
-function App() {
-  const [count, setCount] = useState(0)
+import logo from './assets/bartender-buddy-logo.png';
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+import styles from './App.module.scss';
+
+const App = () => (
+  <div className={styles.appContainer}>
+    <div className={styles.appHeader}>
+      <img src={logo} alt="Bartender Buddy Logo" className={styles.logo} />
+    </div>
+    <div className={styles.appBodyContainer}>
+      <div className={styles.stationsContainer}>
+        <Stations />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
+      <div className={styles.cocktailsContainer}>
+        <Cocktails />
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    </div>
+  </div>
+);
 
-export default App
+export default App;

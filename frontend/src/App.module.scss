@@ -1,0 +1,28 @@
+.appContainer {
+  background-color: var(--white);
+  color: var(--black);
+  height: 100vh;
+  padding: 8px;
+  width: 100vw;
+
+  .logo {
+    height: 36px;
+    margin: 0 auto;
+  }
+
+  .appBodyContainer {
+    display: flex;
+    flex-direction: row;
+    // align-items: center;
+    // justify-content: center;
+
+    .stationsContainer {
+      flex: 1;
+    }
+
+    .cocktailsContainer {
+      flex: 4;
+      overflow-y: scroll;
+    }
+  }
+}
