@@ -13,11 +13,18 @@
   .appBodyContainer {
     display: flex;
     flex-direction: row;
-    // align-items: center;
-    // justify-content: center;
+    gap: 4px;
 
     .stationsContainer {
+      display: flex;
       flex: 1;
+    }
+
+    .verticalLine {
+      background-color: var(--midGray);
+      width: 1px;
+      margin: 0 16px;
+      height: 100%;
     }
 
     .cocktailsContainer {

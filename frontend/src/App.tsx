@@ -13,6 +13,7 @@ const App = () => (
     <div className={styles.appBodyContainer}>
       <div className={styles.stationsContainer}>
         <Stations />
+        <div className={styles.verticalLine}> </div>
       </div>
       <div className={styles.cocktailsContainer}>
         <Cocktails />

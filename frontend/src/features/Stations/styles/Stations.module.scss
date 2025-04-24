@@ -1,0 +1,30 @@
+.stationsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0 24px;
+
+  .station {
+    cursor: pointer;
+    display: flex;
+    margin-bottom: 12px;
+
+    .stationName {
+      background-color: var(--mutedTeal);
+      border: 1px solid var(--baseTeal);
+      border-radius: 4px 0 0 4px;
+      padding: 8px;
+      text-align: center;
+    }
+
+    .mixer {
+      background-color: var(--mutedTeal);
+      border: 1px solid var(--baseTeal);
+      border-radius: 0 4px 4px 0;
+      font-weight: var(--regular);
+      height: 100%;
+      padding: 8px;
+      width: 172px;
+    }
+  }
+}

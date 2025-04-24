@@ -25,22 +25,24 @@
   --font-xs: 0.5rem;
   --font-sm: 0.75rem;
   --font-md: 1rem;
-  --font-lg: 1.5rem;
-  --font-xl: 3.5rem;
+  --font-lg: 1.1rem;
+  --font-xl: 1.25rem;
+  --font-xxl: 1.5rem;
 
   /****************
     * Font Weights *
     ****************/
-  --ultralight: 100;
-  --light: 200;
-  --regular: 300;
+  --light: 400;
+  --regular: 500;
+  --bold: 600;
 
   /******************
-    * Letter Spacing *
-    ******************/
-  --narrow-spacing: 0.12em;
-  --mid-spacing: 0.16em;
+  * Letter Spacing *
+  ******************/
+  --regular-spacing: 0.12em;
   --wide-spacing: 0.2em;
+  --wider-spacing: 0.25em;
+  --widest-spacing: 0.3em;
 }
 
 /**********
@@ -58,5 +60,61 @@ body {
   background-color: var(--black);
   color: var(--white);
   font-family: var(--fontFamily);
+  font-size: var(--fontSize);
+  font-weight: var(--regular);
+  letter-spacing: var(--regular-spacing);
   margin: 0;
+}
+
+/***************
+ *   Mixins    *
+ ***************/
+@mixin heading-style($font-size, $font-weight, $letter-spacing) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+  letter-spacing: $letter-spacing;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+/***************
+ *   Headings   *
+ ***************/
+h1 {
+  @include heading-style(var(--font-xxl), var(--bold), var(--widest-spacing));
+
+  &::after {
+    content: '';
+    display: block;
+    width: 32px;
+    height: 3px;
+    background-color: var(--baseTeal);
+    margin: 4px 0;
+  }
+}
+
+h2 {
+  @include heading-style(var(--font-xl), var(--bold), var(--wider-spacing));
+
+  &::after {
+    content: '';
+    display: block;
+    width: 32px;
+    height: 3px;
+    background-color: var(--baseTeal);
+    margin: 2px 0;
+  }
+}
+
+h3 {
+  @include heading-style(var(--font-lg), var(--light), var(--wide-spacing));
+
+  &::after {
+    content: '';
+    display: block;
+    width: 32px;
+    height: 3px;
+    background-color: var(--baseTeal);
+    margin: 1px 0;
+  }
 }
