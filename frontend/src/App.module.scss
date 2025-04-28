@@ -1,9 +1,8 @@
 .appContainer {
   background-color: var(--white);
   color: var(--black);
-  height: 100vh;
   padding: 8px;
-  width: 100vw;
+  width: 100%;
 
   .logo {
     height: 36px;
@@ -12,8 +11,8 @@
 
   .appBodyContainer {
     display: flex;
+    flex: 1;
     flex-direction: row;
-    gap: 4px;
 
     .stationsContainer {
       display: flex;
@@ -29,7 +28,6 @@
 
     .cocktailsContainer {
       flex: 4;
-      overflow-y: scroll;
     }
   }
 }

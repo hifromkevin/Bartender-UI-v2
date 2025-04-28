@@ -12,6 +12,7 @@
     **********/
   --black: #313131;
   --white: #fcfcfc;
+  --softGray: #f0f0f0;
   --lightGray: #cfcfcf;
   --midGray: #a4a4a4;
   --baseTeal: #5ed1c4;
@@ -50,6 +51,7 @@
   **********/
 
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   -moz-osx-font-smoothing: grayscale;
@@ -61,20 +63,24 @@ body {
   color: var(--white);
   font-family: var(--fontFamily);
   font-size: var(--fontSize);
-  font-weight: var(--regular);
+  font-weight: var(--light);
   letter-spacing: var(--regular-spacing);
-  margin: 0;
 }
 
 /***************
  *   Mixins    *
  ***************/
-@mixin heading-style($font-size, $font-weight, $letter-spacing) {
+@mixin heading-style(
+  $font-size,
+  $font-weight,
+  $letter-spacing,
+  $text-transform: uppercase
+) {
   font-size: $font-size;
   font-weight: $font-weight;
   letter-spacing: $letter-spacing;
   margin: 0;
-  text-transform: uppercase;
+  text-transform: $text-transform;
 }
 
 /***************
@@ -117,4 +123,13 @@ h3 {
     background-color: var(--baseTeal);
     margin: 1px 0;
   }
+}
+
+h4 {
+  @include heading-style(
+    var(--font-md),
+    var(--regular),
+    var(--regular-spacing),
+    none
+  );
 }
