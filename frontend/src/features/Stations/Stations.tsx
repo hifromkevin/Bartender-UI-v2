@@ -4,7 +4,11 @@ import { IStation, TStations } from '../../types/stationTypes';
 
 import styles from './styles/Stations.module.scss';
 
-const Stations = () => {
+interface IStationsProps {
+  setIsStationSelected: Function;
+}
+
+const Stations = ({ setIsStationSelected }: IStationsProps) => {
   const [stations, setStations] = useState<TStations>([]);
 
   useEffect(() => {
@@ -13,20 +17,34 @@ const Stations = () => {
         .fill(null)
         .map((_, index) => ({
           station: index + 1,
-          mixer: null,
+          mixer: index === 2 ? 'Tequila' : null,
         }))
     );
   }, []);
 
   return (
-    <aside className={styles.stationsContainer}>
+    <aside className={styles.stations}>
       <h3>Stations</h3>
 
       <section>
         {stations.map((station: IStation) => (
-          <div key={station?.station} className={styles.station}>
-            <div className={styles.stationName}>{station?.station}</div>
-            <div className={styles.mixer}>{station?.mixer || 'Empty'}</div>
+          <div
+            key={station?.station}
+            className={styles.station}
+            onClick={() =>
+              setIsStationSelected((prevState: boolean): boolean => !prevState)
+            }
+          >
+            <div
+              className={`${styles.stationName} ${station?.station !== 3 ? styles.stationIsEmpty : ''}`}
+            >
+              {station?.station}
+            </div>
+            <div
+              className={`${styles.mixer} ${station?.station !== 3 ? styles.stationIsEmpty : ''}`}
+            >
+              {station?.mixer || 'Empty'}
+            </div>
           </div>
         ))}
       </section>
