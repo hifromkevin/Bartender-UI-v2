@@ -1,8 +1,8 @@
-.stationsContainer {
+.stations {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  padding: 0 24px;
+  padding-left: 8px;
 
   .station {
     cursor: pointer;
@@ -10,21 +10,27 @@
     margin-bottom: 12px;
 
     .stationName {
-      background-color: var(--mutedTeal);
-      border: 1px solid var(--baseTeal);
+      background-color: var(--white);
+      border: 1px solid var(--lightGray);
       border-radius: 4px 0 0 4px;
+      border-right: 0px;
       padding: 8px;
       text-align: center;
     }
 
     .mixer {
-      background-color: var(--mutedTeal);
-      border: 1px solid var(--baseTeal);
+      background-color: var(--white);
+      border: 1px solid var(--lightGray);
       border-radius: 0 4px 4px 0;
       font-weight: var(--regular);
       height: 100%;
       padding: 8px;
       width: 172px;
+    }
+
+    .stationIsEmpty {
+      background-color: var(--softGray);
+      border-color: var(--baseTeal);
     }
   }
 }
