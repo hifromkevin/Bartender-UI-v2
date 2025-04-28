@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Stations from './features/Stations/Stations';
 import SelectedStation from './features/SelectedStation/SelectedStation';
 import Cocktails from './features/Cocktails/Cocktails';
@@ -10,6 +10,16 @@ import styles from './App.module.scss';
 const App = () => {
   const [isStationSelected, setIsStationSelected] = useState<boolean>(false);
 
+  const [showSelectedStation, setShowSelectedStation] = useState(false);
+  useEffect(() => {
+    if (isStationSelected) {
+      setShowSelectedStation(true);
+    } else {
+      const timeout = setTimeout(() => setShowSelectedStation(false), 600);
+      return () => clearTimeout(timeout);
+    }
+  }, [isStationSelected]);
+
   return (
     <div className={styles.appContainer}>
       <div className={styles.appHeader}>
@@ -19,10 +29,19 @@ const App = () => {
       <div className={styles.appBodyContainer}>
         <div className={styles.stationsContainer}>
           <Stations setIsStationSelected={setIsStationSelected} />
-          <div className={isStationSelected ? '' : styles.verticalLine}> </div>
+          <div className={styles.verticalLine}> </div>
         </div>
         <div className={styles.cocktailsContainer}>
-          {isStationSelected ? <SelectedStation /> : <Cocktails />}
+          <div className={styles.cocktailSlideContainer}>
+            <Cocktails />
+            {showSelectedStation && (
+              <div
+                className={`${styles.selectedStationSlide} ${!isStationSelected ? styles.slideOut : ''}`}
+              >
+                <SelectedStation />
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </div>
