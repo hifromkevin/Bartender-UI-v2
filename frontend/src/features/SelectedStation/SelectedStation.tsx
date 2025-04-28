@@ -57,7 +57,7 @@ const fakeMixers = [
   {
     id: 4,
     name: 'Canada Dry Ginger Ale',
-    brand: 'Canda Dry',
+    brand: 'Canada Dry',
     type: 'Ginger Ale',
     flavor: null,
     is_favorite: false,
@@ -87,16 +87,14 @@ const SelectedStation = () => {
 
       <section className={styles.selector}>
         <section className={styles.stationSelection}>
-          <div>
-            <div className={styles.stationData}>
-              <img
-                src={absolut}
-                alt="Absolut Vodka"
-                className={styles.stationImage}
-              />
-              <h4>Vodka</h4>
-              <p>Absolut Vodka</p>
-            </div>
+          <div className={styles.stationData}>
+            <img
+              src={absolut}
+              alt="Absolut Vodka"
+              className={styles.stationImage}
+            />
+            <h4>Vodka</h4>
+            <p>Absolut Vodka</p>
           </div>
           <div className={styles.verticalLine}> </div>
         </section>
