@@ -4,6 +4,23 @@
   gap: 1rem;
   padding-left: 8px;
 
+  .stationsTitle {
+    display: flex;
+    gap: 4px;
+    justify-content: space-between;
+
+    .arrow {
+      cursor: pointer;
+      height: 16px;
+      width: 16px;
+      margin-top: 5px;
+    }
+
+    .toggleArrowRight {
+      transform: rotate(180deg);
+    }
+  }
+
   .station {
     cursor: pointer;
     display: flex;
@@ -13,15 +30,23 @@
       background-color: var(--white);
       border: 1px solid var(--lightGray);
       border-radius: 4px 0 0 4px;
-      border-right: 0px;
       font-weight: var(--regular);
       padding: 8px;
       text-align: center;
     }
 
+    .stationNameOnly {
+      border-radius: 4px;
+    }
+
+    .hideMixerName {
+      display: none;
+    }
+
     .mixer {
       background-color: var(--white);
       border: 1px solid var(--lightGray);
+      border-left: 0px;
       border-radius: 0 4px 4px 0;
       font-weight: var(--light);
       height: 100%;

@@ -18,16 +18,12 @@
 
   .appBodyContainer {
     display: flex;
-    flex: 1 1 auto; /* Fill remaining space */
+    flex: auto;
     flex-direction: row;
-    // height: 0; /* Important: prevent the body from expanding beyond screen */
-    overflow: hidden; /* Prevent overall body from scrolling */
+    overflow: hidden;
 
     .stationsContainer {
-      width: 250px; /* Fixed width for the stations */
       display: flex;
-      flex-direction: row;
-      overflow: hidden; /* No scroll here */
     }
 
     .verticalLine {

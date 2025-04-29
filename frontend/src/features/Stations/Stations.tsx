@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 
 import { IStation, TStations } from '../../types/stationTypes';
 
+import { arrow } from '../../assets/exportIcons';
+
 import styles from './styles/Stations.module.scss';
 
 interface IStationsProps {
@@ -10,6 +12,7 @@ interface IStationsProps {
 
 const Stations = ({ setIsStationSelected }: IStationsProps) => {
   const [stations, setStations] = useState<TStations>([]);
+  const [showStations, setShowStations] = useState<boolean>(true);
 
   useEffect(() => {
     setStations(
@@ -24,7 +27,15 @@ const Stations = ({ setIsStationSelected }: IStationsProps) => {
 
   return (
     <aside className={styles.stations}>
-      <h3>Stations</h3>
+      <div className={styles.stationsTitle}>
+        <h3>Stations</h3>
+        <img
+          src={arrow}
+          alt="Toggle Open/Close"
+          onClick={() => setShowStations((prevState) => !prevState)}
+          className={`${styles.arrow} ${showStations ? '' : styles.toggleArrowRight}`}
+        />
+      </div>
 
       <section>
         {stations.map((station: IStation) => (
@@ -36,12 +47,12 @@ const Stations = ({ setIsStationSelected }: IStationsProps) => {
             }
           >
             <div
-              className={`${styles.stationName} ${station?.station !== 3 ? styles.stationIsEmpty : ''}`}
+              className={`${styles.stationName} ${showStations ? '' : styles.stationNameOnly} ${station?.station !== 3 ? styles.stationIsEmpty : ''}`}
             >
               {station?.station}
             </div>
             <div
-              className={`${styles.mixer} ${station?.station !== 3 ? styles.stationIsEmpty : ''}`}
+              className={`${showStations ? styles.mixer : styles.hideMixerName} ${station?.station !== 3 ? styles.stationIsEmpty : ''}`}
             >
               {station?.mixer || 'Empty'}
             </div>
