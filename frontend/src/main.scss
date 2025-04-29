@@ -17,6 +17,9 @@
   --midGray: #a4a4a4;
   --baseTeal: #5ed1c4;
   --mutedTeal: #d3e2e1;
+  --danger: #f38686;
+  --warning: #e1e981;
+  --success: #a8e1a8;
 
   /**************
     * Font Sizes *
@@ -65,6 +68,11 @@ body {
   font-size: var(--fontSize);
   font-weight: var(--light);
   letter-spacing: var(--regular-spacing);
+  width: 100%;
+}
+
+#root {
+  width: inherit;
 }
 
 /***************
