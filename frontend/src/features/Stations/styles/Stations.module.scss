@@ -14,6 +14,7 @@
       border: 1px solid var(--lightGray);
       border-radius: 4px 0 0 4px;
       border-right: 0px;
+      font-weight: var(--regular);
       padding: 8px;
       text-align: center;
     }
@@ -22,10 +23,13 @@
       background-color: var(--white);
       border: 1px solid var(--lightGray);
       border-radius: 0 4px 4px 0;
-      font-weight: var(--regular);
+      font-weight: var(--light);
       height: 100%;
+      overflow: hidden;
       padding: 8px;
+      text-overflow: ellipsis;
       width: 172px;
+      white-space: nowrap;
     }
 
     .stationIsEmpty {

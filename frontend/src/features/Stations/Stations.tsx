@@ -17,7 +17,7 @@ const Stations = ({ setIsStationSelected }: IStationsProps) => {
         .fill(null)
         .map((_, index) => ({
           station: index + 1,
-          mixer: index === 2 ? 'Tequila' : null,
+          mixer: index === 2 ? 'Spiced Pear Liqueur' : null,
         }))
     );
   }, []);
