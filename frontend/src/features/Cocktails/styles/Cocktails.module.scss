@@ -2,6 +2,18 @@
   height: 100%;
   overflow-y: hidden;
 
+  .cocktailsHeader {
+    display: flex;
+
+    .infoIcon {
+      cursor: pointer;
+      height: 16px;
+      margin-left: 8px;
+      margin-top: 5px;
+      width: 16px;
+    }
+  }
+
   .cocktailsList {
     align-content: flex-start;
     display: flex;
