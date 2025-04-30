@@ -127,7 +127,11 @@ const setDifficultyColor = (difficulty: string): string => {
   }
 };
 
-const Cocktails = () => {
+interface ICocktailsProps {
+  setIsCocktailSelected: Function;
+}
+
+const Cocktails = ({ setIsCocktailSelected }: ICocktailsProps) => {
   return (
     <section className={styles.cocktails}>
       <div className={styles.cocktailsHeader}>
@@ -140,7 +144,14 @@ const Cocktails = () => {
       </div>
       <section className={styles.cocktailsList}>
         {fakeCocktails.map((cocktail) => (
-          <div key={cocktail.id} className={styles.cocktailItem}>
+          <div
+            key={cocktail.id}
+            className={styles.cocktailItem}
+            onClick={() => {
+              console.log('himom!');
+              setIsCocktailSelected(true);
+            }}
+          >
             <img
               src={getCocktailImage(cocktail.name)}
               alt={cocktail.name}
@@ -152,14 +163,6 @@ const Cocktails = () => {
               ></span>
               {cocktail.name}
             </h4>
-            {/* <h4
-              className={`${styles.cocktailName} ${setDifficultyColor(cocktail.difficulty)}`}
-            >
-              <span
-                className={`${styles.difficulty} ${setDifficultyColor(cocktail.difficulty)}`}
-              ></span>
-              {cocktail.name}
-            </h4> */}
           </div>
         ))}
       </section>

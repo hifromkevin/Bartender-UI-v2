@@ -3,7 +3,7 @@
   color: var(--black);
   padding: 0 8px;
   width: 100%;
-  height: 100vh; /* Full screen height */
+  height: 100vh;
   display: flex;
   flex-direction: column;
 
@@ -22,8 +22,16 @@
     flex-direction: row;
     overflow: hidden;
 
+    &.shiftLeft {
+      transform: translateX(-10%);
+    }
+
     .stationsContainer {
       display: flex;
+    }
+
+    .hideStations {
+      display: none;
     }
 
     .verticalLine {
@@ -38,11 +46,31 @@
       position: relative;
       flex: 1;
       overflow: hidden;
+
+      display: flex;
+    }
+
+    .selectedStationSlide {
+      transition: transform 1s ease;
+      background-color: var(--white);
+      // box-shadow: -20px 0px 10px 1px #aaaaaa;
+      z-index: 2;
+    }
+
+    .selectedStationSlide {
+      transform: translateX(0);
+      transition: transform 1s ease;
+    }
+
+    .slideOut {
+      transform: translateX(100%);
     }
 
     .cocktailSlideContainer {
-      position: relative;
+      display: flex;
       height: 100%;
+      width: 100%;
+      transition: width 1s ease;
     }
 
     .selectedStationSlide {
@@ -52,11 +80,25 @@
       width: 100%;
       height: 100%;
       background-color: var(--white);
-      animation: slideIn 0.6s forwards;
+      animation: slideIn 1s forwards;
     }
 
     .slideOut {
-      animation: slideOut 0.6s forwards;
+      animation: slideOut 1s forwards;
+    }
+
+    .cocktailRecipeSlide {
+      width: 33%;
+      min-width: 300px;
+      max-width: 400px;
+      background-color: var(--white);
+      height: 100%;
+      box-shadow: -4px 0 12px rgba(0, 0, 0, 0.1);
+      transition: transform 1s ease;
+    }
+
+    .slideOutCocktailRecipe {
+      transform: translateX(100%);
     }
 
     @keyframes slideIn {
