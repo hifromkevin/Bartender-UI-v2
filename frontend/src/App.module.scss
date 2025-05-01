@@ -17,6 +17,7 @@
 
   .appBodyContainer {
     display: flex;
+    flex: 1 1 auto;
     overflow: hidden;
 
     &.shiftLeft {
@@ -49,6 +50,10 @@
       display: flex;
       transition: transform 0.5s ease;
       width: 100%;
+
+      .cocktailSlideContainer {
+        position: relative;
+      }
     }
 
     .selectedStationSlide {
