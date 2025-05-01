@@ -40,45 +40,31 @@ const App = () => {
       </div>
 
       <div
-        className={`${styles.appBodyContainer} ${
-          showCocktailRecipe ? styles.shiftLeft : ''
-        }`}
+        className={`${styles.appBodyContainer} ${showCocktailRecipe ? styles.shiftLeft : styles.shiftRight}`}
       >
-        <div
-          className={` ${showCocktailRecipe ? styles.hideStations : styles.stationsContainer}`}
-          // className={`${styles.stationsContainer} ${
-          //   showCocktailRecipe ? styles.shiftLeft2 : ''
-          // }`}
-        >
+        <div className={styles.stationsContainer}>
           <Stations setIsStationSelected={setIsStationSelected} />
           <div className={styles.verticalLine}></div>
         </div>
         <div className={styles.cocktailsContainer}>
-          <div
-            className={`${styles.cocktailSlideContainer}`}
-            // className={`${styles.cocktailSlideContainer} ${
-            //   showCocktailRecipe ? styles.shiftLeft : ''
-            // }`}
-          >
+          <div className={styles.cocktailSlideContainer}>
             <Cocktails setIsCocktailSelected={setIsCocktailSelected} />
             {showSelectedStation && (
               <div
-                className={`${styles.selectedStationSlide} ${!isStationSelected ? styles.slideOut : ''}`}
+                className={`${styles.selectedStationSlide} ${
+                  !isStationSelected ? styles.slideOut : ''
+                }`}
               >
                 <SelectedStation />
               </div>
             )}
           </div>
         </div>
-        {showCocktailRecipe && (
-          <div
-            className={`${styles.cocktailRecipeSlide} ${
-              !isCocktailSelected ? styles.slideOutCocktailRecipe : ''
-            }`}
-          >
-            <CocktailRecipe setIsCocktailSelected={setIsCocktailSelected} />
-          </div>
-        )}
+      </div>
+      <div
+        className={`${styles.cocktailRecipeSlide} ${showCocktailRecipe ? styles.slideIn : styles.slideOut}`}
+      >
+        <CocktailRecipe setIsCocktailSelected={setIsCocktailSelected} />
       </div>
     </div>
   );
