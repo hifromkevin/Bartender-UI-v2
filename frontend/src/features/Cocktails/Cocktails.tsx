@@ -37,6 +37,7 @@ const fakeCocktails = [
     requires_shaker: true,
     instructions_id: 1,
     difficulty: 'Medium',
+    alcoholic: true,
   },
   {
     id: 2,
@@ -48,6 +49,7 @@ const fakeCocktails = [
     requires_shaker: false,
     instructions_id: 2,
     difficulty: 'Medium',
+    alcoholic: true,
   },
   {
     id: 3,
@@ -58,6 +60,7 @@ const fakeCocktails = [
     requires_shaker: false,
     instructions_id: 1,
     difficulty: 'Easy',
+    alcoholic: true,
   },
   {
     id: 4,
@@ -69,6 +72,7 @@ const fakeCocktails = [
     requires_shaker: false,
     instructions_id: 2,
     difficulty: 'Hard',
+    alcoholic: true,
   },
   {
     id: 5,
@@ -79,6 +83,7 @@ const fakeCocktails = [
     requires_shaker: false,
     instructions_id: 1,
     difficulty: 'Easy',
+    alcoholic: true,
   },
   {
     id: 6,
@@ -90,6 +95,7 @@ const fakeCocktails = [
     requires_shaker: false,
     instructions_id: 2,
     difficulty: 'Medium',
+    alcoholic: false,
   },
   {
     id: 7,
@@ -100,6 +106,7 @@ const fakeCocktails = [
     requires_shaker: false,
     instructions_id: 1,
     difficulty: 'Easy',
+    alcoholic: true,
   },
   {
     id: 8,
@@ -111,6 +118,7 @@ const fakeCocktails = [
     requires_shaker: false,
     instructions_id: 2,
     difficulty: 'Easy',
+    alcoholic: true,
   },
 ];
 
@@ -147,10 +155,7 @@ const Cocktails = ({ setIsCocktailSelected }: ICocktailsProps) => {
           <div
             key={cocktail.id}
             className={styles.cocktailItem}
-            onClick={() => {
-              console.log('himom!');
-              setIsCocktailSelected(true);
-            }}
+            onClick={() => setIsCocktailSelected(true)}
           >
             <img
               src={getCocktailImage(cocktail.name)}
@@ -161,6 +166,7 @@ const Cocktails = ({ setIsCocktailSelected }: ICocktailsProps) => {
               <span
                 className={`${styles.difficulty} ${setDifficultyColor(cocktail.difficulty)}`}
               ></span>
+              {!cocktail.alcoholic ? 'NA' : ''}
               {cocktail.name}
             </h4>
           </div>
