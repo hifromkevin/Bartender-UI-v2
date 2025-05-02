@@ -24,15 +24,6 @@
       &.active {
         border-bottom: 2px solid var(--black);
         font-weight: var(--bold);
-
-        &:hover {
-          border-bottom: 2px solid var(--black);
-        }
-      }
-
-      &:hover {
-        border: none;
-        outline: none;
       }
     }
   }

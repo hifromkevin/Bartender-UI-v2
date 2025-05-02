@@ -16,6 +16,7 @@
   --lightGray: #cfcfcf;
   --midGray: #a4a4a4;
   --baseTeal: #5ed1c4;
+  --darkTeal: #67a79f;
   --mutedTeal: #d3e2e1;
   --danger: #f38686;
   --warning: #e1e981;
@@ -69,6 +70,24 @@ body {
   font-weight: var(--light);
   letter-spacing: var(--regular-spacing);
   width: 100%;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  font-family: var(--fontFamily);
+  font-size: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+  outline: none;
+  text-transform: inherit;
+
+  &:active,
+  &:focus,
+  &:hover {
+    border: none;
+    outline: none;
+  }
 }
 
 #root {
