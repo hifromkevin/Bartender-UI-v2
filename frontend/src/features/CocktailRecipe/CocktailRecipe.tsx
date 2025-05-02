@@ -1,3 +1,5 @@
+import Tabs from '../../components/Tabs/Tabs';
+
 import {
   chocolatini,
   ginAndTonic,
@@ -44,20 +46,55 @@ interface ICocktailRecipeProps {
 
 const CocktailRecipe = ({ setIsCocktailSelected }: ICocktailRecipeProps) => {
   return (
-    <section
-      className={styles.cocktailRecipe}
-      onClick={() => setIsCocktailSelected(false)}
-    >
-      <div className={styles.cocktailRecipeImage}>
-        <img
-          src={getCocktailImage(cocktailData.name)}
-          alt={cocktailData.name}
-          className={styles.cocktailImage}
-        />
+    <section className={styles.cocktailRecipe}>
+      <div className={styles.cocktailRecipeClose}>
+        <button
+          className={styles.cocktailRecipeCloseButton}
+          onClick={() => setIsCocktailSelected(false)}
+        >
+          X
+        </button>
       </div>
-      <div className={styles.cocktailRecipeHeader}>
-        <h3>Rum and Coke</h3>
-        <p>{cocktailData.description}</p>
+
+      <div className={styles.cocktailRecipeInfo}>
+        <div className={styles.cocktailRecipeImage}>
+          <img
+            src={getCocktailImage(cocktailData.name)}
+            alt={cocktailData.name}
+            className={styles.cocktailImage}
+          />
+        </div>
+        <div className={styles.cocktailRecipeHeader}>
+          <h4>Rum and Coke</h4>
+          <p>{cocktailData.description}</p>
+        </div>
+        <Tabs />
+        {/* <div className={styles.cocktailRecipeToggle}>
+        <div className={styles.cocktailRecipeToggleButton}>
+          <button className={styles.cocktailRecipeToggleButtonActive}>
+            Recipe
+          </button>
+          <button className={styles.cocktailRecipeToggleButtonInactive}>
+            Instructions
+          </button>
+        </div>
+        <div className={styles.cocktailRecipeDetail}>
+          <span>Glass Type:</span>
+          <p>{cocktailData.glass_type}</p>
+        </div>
+        <div className={styles.cocktailRecipeDetail}>
+          <span>Ice Type:</span>
+          <p>{cocktailData.ice_type}</p>
+        </div>
+        <div className={styles.cocktailRecipeDetail}>
+          <span>Requires Shaker:</span>
+          <p>{cocktailData.requires_shaker ? 'Yes' : 'No'}</p>
+        </div>
+        <div className={styles.cocktailRecipeDetail}>
+          <span>Difficulty:</span>
+          <p>{cocktailData.difficulty}</p>
+        </div>
+      </div> */}
       </div>
     </section>
   );

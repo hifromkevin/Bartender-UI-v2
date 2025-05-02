@@ -28,8 +28,7 @@ const App = () => {
     if (isCocktailSelected) {
       setShowCocktailRecipe(true);
     } else {
-      const timeout = setTimeout(() => setShowCocktailRecipe(false), 600);
-      return () => clearTimeout(timeout);
+      setShowCocktailRecipe(false);
     }
   }, [isCocktailSelected]);
 
