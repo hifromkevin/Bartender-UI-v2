@@ -69,32 +69,15 @@ const CocktailRecipe = ({ setIsCocktailSelected }: ICocktailRecipeProps) => {
           <p>{cocktailData.description}</p>
         </div>
         <Tabs />
-        {/* <div className={styles.cocktailRecipeToggle}>
-        <div className={styles.cocktailRecipeToggleButton}>
-          <button className={styles.cocktailRecipeToggleButtonActive}>
-            Recipe
+        <div className={styles.actionButtons}>
+          <button
+            className={styles.goBack}
+            onClick={() => setIsCocktailSelected(false)}
+          >
+            Go Back
           </button>
-          <button className={styles.cocktailRecipeToggleButtonInactive}>
-            Instructions
-          </button>
+          <button className={styles.startCocktail}>Start Cocktail</button>
         </div>
-        <div className={styles.cocktailRecipeDetail}>
-          <span>Glass Type:</span>
-          <p>{cocktailData.glass_type}</p>
-        </div>
-        <div className={styles.cocktailRecipeDetail}>
-          <span>Ice Type:</span>
-          <p>{cocktailData.ice_type}</p>
-        </div>
-        <div className={styles.cocktailRecipeDetail}>
-          <span>Requires Shaker:</span>
-          <p>{cocktailData.requires_shaker ? 'Yes' : 'No'}</p>
-        </div>
-        <div className={styles.cocktailRecipeDetail}>
-          <span>Difficulty:</span>
-          <p>{cocktailData.difficulty}</p>
-        </div>
-      </div> */}
       </div>
     </section>
   );

@@ -1,16 +1,14 @@
 .cocktailRecipe {
   height: inherit;
   overflow: hidden;
-  padding: 12px;
+  padding: 0 12px 12px;
 
   .cocktailRecipeClose {
     text-align: right;
 
     .cocktailRecipeCloseButton {
       background-color: transparent;
-      border: none;
-      cursor: pointer;
-      outline: none;
+      font-weight: var(--bold);
     }
   }
 
@@ -23,6 +21,7 @@
 
       h4 {
         font-size: var(--font-lg);
+        margin: 12px 0;
         text-transform: uppercase;
       }
     }
@@ -33,8 +32,52 @@
 
       .cocktailImage {
         border-radius: 100%;
-        height: 200px;
-        width: 200px;
+        height: 160px;
+        width: 160px;
+      }
+    }
+  }
+
+  .actionButtons {
+    display: flex;
+    font-weight: var(--light);
+    gap: 8px;
+    justify-content: center;
+    letter-spacing: var(--regular-spacing);
+    margin-top: 12px;
+    text-transform: uppercase;
+
+    .goBack {
+      background: transparent;
+      border: none;
+      color: var(--black);
+      cursor: pointer;
+      transition: font-weight 0.7s ease;
+
+      &:hover {
+        font-weight: var(--bold);
+        transition: font-weight 0.7s ease;
+      }
+    }
+
+    .startCocktail {
+      background-color: var(--baseTeal);
+      border-radius: 4px;
+      color: var(--white);
+      cursor: pointer;
+      padding: 8px 16px;
+      text-align: center;
+      text-transform: uppercase;
+      transition:
+        background-color 0.7s ease,
+        font-weight 0.7s ease;
+
+      &:hover {
+        background-color: var(--darkTeal);
+        font-weight: var(--bold);
+        transition:
+          background-color 0.7s ease,
+          font-weight 0.7s ease;
       }
     }
   }
