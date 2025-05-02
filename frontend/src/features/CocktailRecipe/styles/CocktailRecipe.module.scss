@@ -1,0 +1,41 @@
+.cocktailRecipe {
+  height: inherit;
+  overflow: hidden;
+  padding: 12px;
+
+  .cocktailRecipeClose {
+    text-align: right;
+
+    .cocktailRecipeCloseButton {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      outline: none;
+    }
+  }
+
+  .cocktailRecipeInfo {
+    height: inherit;
+    overflow-y: scroll;
+
+    .cocktailRecipeHeader {
+      text-align: center;
+
+      h4 {
+        font-size: var(--font-lg);
+        text-transform: uppercase;
+      }
+    }
+
+    .cocktailRecipeImage {
+      display: flex;
+      justify-content: center;
+
+      .cocktailImage {
+        border-radius: 100%;
+        height: 200px;
+        width: 200px;
+      }
+    }
+  }
+}
