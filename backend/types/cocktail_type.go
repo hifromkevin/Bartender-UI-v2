@@ -16,7 +16,6 @@ type CocktailDetails struct {
 	Steps        []CocktailStep        `json:"steps"`
 	Ingredients  []CocktailIngredient  `json:"ingredients"`
 	Tools        []CocktailTool        `json:"tools"`
-	Glass        *CocktailGlass        `json:"glass"`
 };
 
 type CocktailStep struct {
@@ -37,13 +36,6 @@ type CocktailIngredient struct {
 };
 
 type CocktailTool struct { 
-  Id						string			`json:"id"`
-	Name					string			`json:"name"`
-	Type					string			`json:"type"`
-	ImageUrl		  string			`json:"image_url"`
-};
-
-type CocktailGlass struct { 
   Id						string			`json:"id"`
 	Name					string			`json:"name"`
 	Type					string			`json:"type"`
