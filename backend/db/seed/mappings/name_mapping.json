@@ -1,0 +1,22 @@
+{
+  "Crème de Violette": [
+    "Violet Creme",
+    "Violet Cream",
+    "Creme de Violette",
+    "Violet Liqueur"
+  ],
+  "Crème de Cassis": ["Blackcurrant Liqueur", "Cassis"],
+  "Agave Syrup": ["Agave Nectar", "Agave"],
+  "Simple Syrup": ["Sugar Syrup"],
+  "Egg White": ["Egg Whites", "Egg Foam"],
+  "Coconut Cream": ["Cream of Coconut"],
+  "Lemon": ["Limon"],
+  "Grapefruit": ["Pamplemousse"],
+  "Spicy": ["Spice", "Spicey", "Spiced"],
+  "Jalapeño": ["Jalapeno"],
+  "Orange": ["Naranja"],
+  "Mint": ["Mint Leaf"],
+  "Basil": ["Basil Leaf"],
+  "Curaçao": ["Curacao"],
+  "Cachaça": ["Cachaca"]
+}
