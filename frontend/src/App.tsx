@@ -10,10 +10,13 @@ import styles from './App.module.scss';
 
 const App = () => {
   const [isStationSelected, setIsStationSelected] = useState<boolean>(false);
-  const [showSelectedStation, setShowSelectedStation] = useState(false);
+  const [showSelectedStation, setShowSelectedStation] =
+    useState<boolean>(false);
+  const [selectedStation, setSelectedStation] = useState<number | null>(null);
 
   const [isCocktailSelected, setIsCocktailSelected] = useState<boolean>(false);
-  const [showCocktailRecipe, setShowCocktailRecipe] = useState(false);
+  const [showCocktailRecipe, setShowCocktailRecipe] = useState<boolean>(false);
+  // const [selectedCocktail, setSelectedCocktail] = useState<string | null>(null);
 
   useEffect(() => {
     if (isStationSelected) {
@@ -42,7 +45,10 @@ const App = () => {
         className={`${styles.appBodyContainer} ${showCocktailRecipe ? styles.shiftLeft : styles.shiftRight}`}
       >
         <div className={styles.stationsContainer}>
-          <Stations setIsStationSelected={setIsStationSelected} />
+          <Stations
+            setIsStationSelected={setIsStationSelected}
+            setSelectedStation={setSelectedStation}
+          />
           <div className={styles.verticalLine}></div>
         </div>
         <div className={styles.cocktailsContainer}>
@@ -54,7 +60,10 @@ const App = () => {
                   !isStationSelected ? styles.slideOut : ''
                 }`}
               >
-                <SelectedStation />
+                <SelectedStation
+                  selectedStation={selectedStation}
+                  setIsStationSelected={setIsStationSelected}
+                />
               </div>
             )}
           </div>
