@@ -10,20 +10,28 @@ import (
 func SeedIngredientGroups(db *sql.DB) error {
 	ingredientGroups := []string{
 		"Spirits",
+		"Brandy",
 		"Liqueurs",
 		"Aperitifs",
 		"Digestifs",
+		"Vermouths",
 		"Bitters",
 		"Juices",
-		"Sodas",
+		"Soft Drinks",
 		"Syrups",
 		"Garnishes",
-		"Creams/Cremes",
 		"Fruits",
 		"Vegetables",
-		"Herbs and Spices",
+		"Herbs",
 		"Sweeteners",
-		"Milk",
+		"Dairy",
+		"Sparkling",
+		"Frozen",
+		"Toppings",
+		"Garnishes",
+		"Spicy",
+		"Rims",
+		"Other Flavorings", //EX: "Vanilla Extract", "Almond Extract", "Rose Water", "Orange Blossom Water"
 	}
 
 	tx, err := db.Begin()

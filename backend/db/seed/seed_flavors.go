@@ -24,8 +24,9 @@ func SeedFlavor(db *sql.DB) error {
 		"Chile",
 		"Chocolate",
 		"Cinnamon",
-		"Coffee",
 		"Citrus",
+		"Coffee",
+		"Corn", // TODO: Should this be a flavor?
 		"Cranberry",
 		"Cucumber",
 		"Dragon Berry",
@@ -58,6 +59,7 @@ func SeedFlavor(db *sql.DB) error {
 		"Pumpkin Spice",
 		"Quince",
 		"Raspberry",
+		"Rice", // TODO: Should this be a flavor?
 		"Spiced",
 		"Strawberry",
 		"Tamarind",
