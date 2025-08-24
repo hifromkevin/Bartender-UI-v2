@@ -5,12 +5,13 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/gorilla/mux"
+	"github.com/go-chi/chi/v5"
+	"github.com/go-chi/chi/v5/middleware"
 )
 
 func enableCORS(next http.Handler) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		w.Header().Set("Access-Control-Allow-Origin", "*") 
+		w.Header().Set("Access-Control-Allow-Origin", "*")
 		w.Header().Set("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
 		w.Header().Set("Access-Control-Allow-Headers", "Content-Type")
 		if r.Method == "OPTIONS" {
@@ -21,26 +22,33 @@ func enableCORS(next http.Handler) http.Handler {
 }
 
 func main() {
-	router := mux.NewRouter()
+	router := chi.NewRouter()
+
+	router.Use(middleware.Logger)
+	router.Use(enableCORS)
 
 	staticDir := "../frontend/dist"
-	router.PathPrefix("/").Handler(http.StripPrefix("/", http.FileServer(http.Dir(staticDir))))
 
-	router.PathPrefix("/").HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		if r.URL.Path == "/" || r.URL.Path == "/index.html" {
-			http.ServeFile(w, r, staticDir+"/index.html")
-		} else {
-			http.NotFound(w, r)
-		}
+	router.Handle("/*", http.StripPrefix("/", http.FileServer(http.Dir(staticDir))))
+	router.Handle("/images/*", http.StripPrefix("/images/", http.FileServer(http.Dir("backend/public/images"))))
+
+	router.Get("/", func(w http.ResponseWriter, r *http.Request) {
+		http.ServeFile(w, r, staticDir+"/index.html")
 	})
-	
+
+	router.Get("/himom", func(w http.ResponseWriter, r *http.Request) {
+		w.Header().Set("Content-Type", "application/json")
+		w.WriteHeader(http.StatusOK)
+		w.Write([]byte(`{"paragraph": "This is a mundane paragraph sent from the backend to the frontend."}`))
+	})
+
 	port := os.Getenv("GO_PORT")
 	if port == "" {
-		port = "3003" 
+		port = "3003"
 	}
 
 	log.Printf("Server started on :%s\n", port)
-	if err := http.ListenAndServe(":"+port, enableCORS(router)); err != nil {
+	if err := http.ListenAndServe(":"+port, router); err != nil {
 		log.Fatal("ListenAndServe:", err)
 	}
 }
