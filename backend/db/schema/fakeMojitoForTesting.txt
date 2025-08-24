@@ -1,0 +1,57 @@
+const cocktailsList = 
+[{
+	Cocktail: {
+        id: '[whatever needs to be done for an ID]',
+        name: 'Mojito',
+        description: 'A refreshing cocktail made with rum, mint, lime, and soda water.',
+    is_alcoholic: true,
+    image_url: 'backend/images/mojito.jpg',
+    },
+    Steps: [
+        { id: '[whatever needs to be done for an ID]', step: 'Add ice to shaker.' },
+        { id: '[whatever needs to be done for an ID]', step: 'Muddle mint leaves with sugar and lime juice.' },
+        { id: '[whatever needs to be done for an ID]', step: 'Add to bartender (to receive rum and top with soda water)' },
+        { id: '[whatever needs to be done for an ID]', step: 'Pour shaker liquid into martini glass.' },
+        { id: '[whatever needs to be done for an ID]', step: 'Garnish with mint leaves and lime wedge.' },      
+    ],
+    Ingredients: [
+        { id: '[whatever needs to be done for an ID]', name: 'White rum', amount: '50', unit_of_measurement: 'ml' , is_automatic: true},
+        { id: '[whatever needs to be done for an ID]', name: 'Fresh mint leaves', amount: '10', unit_of_measurement: 'leaves/count/whatever' , is_automatic: false},
+        { id: '[whatever needs to be done for an ID]', name: 'Lime juice', amount: '30', unit_of_measurement: 'ml' , is_automatic: false},
+        { id: '[whatever needs to be done for an ID]', name: 'Sugar', amount: '2' , unit_of_measurement: 'teaspoons' , is_automatic: false},
+        { id: '[whatever needs to be done for an ID]', name: 'Soda water', amount: '20', unit_of_measurement: 'ml', is_automatic: true},
+    ],
+    Tools: [
+        { id: '[whatever needs to be done for an ID]', name: 'Highball glass', type: 'glass', image_url
+: '/public/images/highball-glass.jpg' },
+        { id: '[whatever needs to be done for an ID]', name: 'Shaker', type: 'glass', image_url: '/public/images/shaker.jpg' },
+        { id: '[whatever needs to be done for an ID]', name: 'Muddler', type: 'tool', image_url: '/public/images/muddler.jpg' },
+},
+Cocktail: {
+        id: '[whatever needs to be done for an ID]',
+        name: 'Sex on the Beach',
+        description: 'A fruity cocktail!',
+    is_alcoholic: true,
+    image_url: 'backend/images/sex-on-the-beach.jpg',
+    },
+    Steps: [
+        { id: '[whatever needs to be done for an ID]', step: 'Add ice to shaker.' },
+        { id: '[whatever needs to be done for an ID]', step: 'Muddle mint leaves with sugar and lime juice.' },
+        { id: '[whatever needs to be done for an ID]', step: 'Add to bartender (to receive rum and top with soda water)' },
+        { id: '[whatever needs to be done for an ID]', step: 'Pour shaker liquid into martini glass.' },
+        { id: '[whatever needs to be done for an ID]', step: 'Garnish with mint leaves and lime wedge.' },      
+    ],
+    Ingredients: [
+        { id: '[whatever needs to be done for an ID]', name: 'White rum', amount: '50', unit_of_measurement: 'ml' , is_automatic: true},
+        { id: '[whatever needs to be done for an ID]', name: 'Fresh mint leaves', amount: '10', unit_of_measurement: 'leaves/count/whatever' , is_automatic: false},
+        { id: '[whatever needs to be done for an ID]', name: 'Lime juice', amount: '30', unit_of_measurement: 'ml' , is_automatic: false},
+        { id: '[whatever needs to be done for an ID]', name: 'Sugar', amount: '2' , unit_of_measurement: 'teaspoons' , is_automatic: false},
+        { id: '[whatever needs to be done for an ID]', name: 'Soda water', amount: '20', unit_of_measurement: 'ml', is_automatic: true},
+    ],
+    Tools: [
+        { id: '[whatever needs to be done for an ID]', name: 'Highball glass', type: 'glass', image_url
+: '/public/images/highball-glass.jpg' },
+        { id: '[whatever needs to be done for an ID]', name: 'Shaker', type: 'glass', image_url: '/public/images/shaker.jpg' },
+        { id: '[whatever needs to be done for an ID]', name: 'Muddler', type: 'tool', image_url: '/public/images/muddler.jpg' },
+},
+]
