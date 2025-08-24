@@ -1,30 +1,21 @@
-import {
-  chocolatini,
-  ginAndTonic,
-  moscowMule,
-  oldFashioned,
-  rumAndCoke,
-  shirleyTemple,
-  vodkaCran,
-  vodkaSoda,
-} from '../../assets/exportCocktailIcons';
-import { info } from '../../assets/exportIcons';
+import fakeCocktail from '../../assets/fakeCocktail.jpg';
+import reactIcon from '../../assets/react.svg';
 
 import styles from './styles/Cocktails.module.scss';
 
-const cocktailImages: Record<string, string> = {
-  'Moscow Mule': moscowMule,
-  Chocolatini: chocolatini,
-  'Gin and Tonic': ginAndTonic,
-  'Old Fashioned': oldFashioned,
-  'Rum and Coke': rumAndCoke,
-  'Shirley Temple': shirleyTemple,
-  'Vodka Cran': vodkaCran,
-  'Vodka Soda': vodkaSoda,
-};
+// const cocktailImages: Record<string, string> = {
+//   'Moscow Mule': moscowMule,
+//   Chocolatini: chocolatini,
+//   'Gin and Tonic': ginAndTonic,
+//   'Old Fashioned': oldFashioned,
+//   'Rum and Coke': rumAndCoke,
+//   'Shirley Temple': shirleyTemple,
+//   'Vodka Cran': vodkaCran,
+//   'Vodka Soda': vodkaSoda,
+// };
 
-const getCocktailImage = (cocktailName: string): string =>
-  cocktailImages[cocktailName];
+// const getCocktailImage = (cocktailName: string): string =>
+//   cocktailImages[cocktailName];
 
 const fakeCocktails = [
   {
@@ -145,7 +136,7 @@ const Cocktails = ({ setIsCocktailSelected }: ICocktailsProps) => {
       <div className={styles.cocktailsHeader}>
         <h3>Cocktails </h3>
         <img
-          src={info}
+          src={reactIcon}
           alt="Information about cocktails"
           className={styles.infoIcon}
         />
@@ -158,7 +149,7 @@ const Cocktails = ({ setIsCocktailSelected }: ICocktailsProps) => {
             onClick={() => setIsCocktailSelected(true)}
           >
             <img
-              src={getCocktailImage(cocktail.name)}
+              src={fakeCocktail}
               alt={cocktail.name}
               className={styles.cocktailImage}
             />

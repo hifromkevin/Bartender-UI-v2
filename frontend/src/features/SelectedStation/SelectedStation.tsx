@@ -1,24 +1,19 @@
-import {
-  absolut,
-  bacardi,
-  bombayGin,
-  bottle,
-  canadaDryGingerAle,
-  cranberryJuice,
-} from '../../assets/exportMixers';
+import CloseButton from '../../components/CloseButton/CloseButton';
+
+import fakeMixer from '../../assets/fakeMixer.jpg';
 
 import styles from './styles/SelectedStation.module.scss';
 
-const mixerImages: Record<string, string> = {
-  'Absolut Vodka': absolut,
-  'Bacardi Rum': bacardi,
-  'Bombay Gin': bombayGin,
-  Bottle: bottle,
-  'Canada Dry Ginger Ale': canadaDryGingerAle,
-  'Motts Organic Cranberry Juice': cranberryJuice,
-};
+// const mixerImages: Record<string, string> = {
+//   'Absolut Vodka': absolut,
+//   'Bacardi Rum': bacardi,
+//   'Bombay Gin': bombayGin,
+//   Bottle: bottle,
+//   'Canada Dry Ginger Ale': canadaDryGingerAle,
+//   'Motts Organic Cranberry Juice': cranberryJuice,
+// };
 
-const getMixerImage = (mixerName: string): string => mixerImages[mixerName];
+// const getMixerImage = (mixerName: string): string => mixerImages[mixerName];
 
 const fakeMixers = [
   {
@@ -78,18 +73,26 @@ const fakeMixers = [
   },
 ];
 
-const SelectedStation = () => {
+interface ISelectedStation {
+  selectedStation: number | null;
+  setIsStationSelected: Function;
+}
+const SelectedStation = ({
+  selectedStation,
+  setIsStationSelected,
+}: ISelectedStation) => {
   return (
     <section className={styles.selectedStation}>
       <div className={styles.stationHeader}>
-        <h3>Station 3</h3>
+        <h3>Station {selectedStation}</h3>
+        <CloseButton action={setIsStationSelected} />
       </div>
 
       <section className={styles.selector}>
         <section className={styles.stationSelection}>
           <div className={styles.stationData}>
             <img
-              src={absolut}
+              src={fakeMixer}
               alt="Absolut Vodka"
               className={styles.stationImage}
             />
@@ -102,7 +105,7 @@ const SelectedStation = () => {
           {fakeMixers.map((mixer) => (
             <div key={mixer.id} className={styles.mixerItem}>
               <img
-                src={getMixerImage(mixer.name)}
+                src={fakeMixer}
                 alt={mixer.name}
                 className={styles.mixerImage}
               />

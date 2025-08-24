@@ -1,0 +1,14 @@
+.closeButtonContainer {
+  position: fixed;
+  right: 12px;
+  z-index: 10;
+
+  .closeButton {
+    background-color: transparent;
+    font-weight: var(--bold);
+
+    cursor: pointer;
+    border: none;
+    font-size: 1.5rem;
+  }
+}

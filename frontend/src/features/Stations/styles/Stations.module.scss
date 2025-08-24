@@ -14,7 +14,18 @@
       margin-top: 5px;
     }
 
-    .toggleArrowRight {
+    .icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 24px;
+      width: 24px;
+      margin-left: 8px;
+      margin-right: 8px;
+      cursor: pointer;
+    }
+
+    .iconRight {
       transform: rotate(180deg);
     }
   }

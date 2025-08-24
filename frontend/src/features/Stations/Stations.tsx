@@ -2,15 +2,20 @@ import { useEffect, useState } from 'react';
 
 import { IStation, TStations } from '../../types/stationTypes';
 
-import { arrow } from '../../assets/exportIcons';
+// import { arrow } from '../../assets/exportIcons';
+import ChevronLeft from '../../components/ChevronLeft/ChevronLeft';
 
 import styles from './styles/Stations.module.scss';
 
 interface IStationsProps {
   setIsStationSelected: Function;
+  setSelectedStation: Function;
 }
 
-const Stations = ({ setIsStationSelected }: IStationsProps) => {
+const Stations = ({
+  setIsStationSelected,
+  setSelectedStation,
+}: IStationsProps) => {
   const [stations, setStations] = useState<TStations>([]);
   const [showStations, setShowStations] = useState<boolean>(true);
 
@@ -29,22 +34,22 @@ const Stations = ({ setIsStationSelected }: IStationsProps) => {
     <aside className={styles.stations}>
       <div className={styles.stationsTitle}>
         <h3>Stations</h3>
-        <img
-          src={arrow}
-          alt="Toggle Open/Close"
+        <span
+          className={`${styles.icon} ${showStations ? '' : styles.iconRight}`}
           onClick={() => setShowStations((prevState) => !prevState)}
-          className={`${styles.arrow} ${showStations ? '' : styles.toggleArrowRight}`}
-        />
+        >
+          <ChevronLeft />
+        </span>
       </div>
-
       <section>
-        {stations.map((station: IStation) => (
+        {stations.map((station: IStation, i: number) => (
           <div
             key={station?.station}
             className={styles.station}
-            onClick={() =>
-              setIsStationSelected((prevState: boolean): boolean => !prevState)
-            }
+            onClick={() => {
+              setSelectedStation(i + 1);
+              setIsStationSelected((prevState: boolean): boolean => !prevState);
+            }}
           >
             <div
               className={`${styles.stationName} ${showStations ? '' : styles.stationNameOnly} ${station?.station !== 3 ? styles.stationIsEmpty : ''}`}

@@ -3,6 +3,9 @@
   overflow-y: hidden;
 
   .stationHeader {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
     margin-left: 16px;
   }
 
@@ -25,8 +28,8 @@
         .stationImage {
           border: 4px solid var(--baseTeal);
           border-radius: 100%;
-          height: 200px;
-          width: 200px;
+          height: 160px;
+          width: 160px;
           object-fit: cover;
         }
       }
@@ -66,8 +69,8 @@
         .mixerImage {
           border: 4px solid var(--baseTeal);
           border-radius: 100%;
-          height: 132px;
-          width: 132px;
+          height: 120px;
+          width: 120px;
           object-fit: cover;
         }
       }
