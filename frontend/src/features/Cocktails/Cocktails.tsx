@@ -1,5 +1,5 @@
 import fakeCocktail from '../../assets/fakeCocktail.jpg';
-import reactIcon from '../../assets/react.svg';
+import InfoIcon from '../../components/InfoIcon/InfoIcon';
 
 import styles from './styles/Cocktails.module.scss';
 
@@ -135,11 +135,9 @@ const Cocktails = ({ setIsCocktailSelected }: ICocktailsProps) => {
     <section className={styles.cocktails}>
       <div className={styles.cocktailsHeader}>
         <h3>Cocktails </h3>
-        <img
-          src={reactIcon}
-          alt="Information about cocktails"
-          className={styles.infoIcon}
-        />
+        <span className={styles.infoIcon}>
+          <InfoIcon />
+        </span>
       </div>
       <section className={styles.cocktailsList}>
         {fakeCocktails.map((cocktail) => (
