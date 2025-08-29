@@ -24,8 +24,6 @@ const App = () => {
   const { catchphraseString } = useFetchCatchphraseString();
   const { catchphrase } = useFetchCatchphrase();
 
-  console.log('himom?', catchphraseString, catchphrase);
-
   useEffect(() => {
     if (isStationSelected) {
       setShowSelectedStation(true);
