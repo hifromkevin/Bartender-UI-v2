@@ -22,7 +22,9 @@ const App = () => {
   // const [selectedCocktail, setSelectedCocktail] = useState<string | null>(null);
 
   const { catchphraseString } = useFetchCatchphraseString();
-  const { catchphrase, byline } = useFetchCatchphrase();
+  const { catchphrase } = useFetchCatchphrase();
+
+  console.log('himom?', catchphraseString, catchphrase);
 
   useEffect(() => {
     if (isStationSelected) {
@@ -46,7 +48,13 @@ const App = () => {
       <div className={styles.appHeader}>
         <img src={logo} alt="Bartender Buddy Logo" className={styles.logo} />
         <p>
-          {catchphrase && byline ? `${catchphrase} ${byline} ` : ''}
+          {catchphrase?.map(
+            (item: { catchphrase: string; byline: string }, index: number) => (
+              <span key={index}>
+                {item.catchphrase} {item.byline}
+              </span>
+            )
+          )}
           {catchphraseString && catchphraseString}
         </p>
       </div>

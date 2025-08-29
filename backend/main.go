@@ -45,8 +45,11 @@ func main() {
 	router.Get("/catchphrase", func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Content-Type", "application/json")
 		w.WriteHeader(http.StatusOK)
-		w.Write([]byte(`{"catchphrase": "Mix smarter.", "byline": "Drink better."}`))
-	})
+		w.Write([]byte(`[
+		{"catchphrase": "Mix smarter.", "byline": "Drink better."},
+		{"catchphrase": "Shake it up!", "byline": "Enjoy responsibly."}
+	]`))
+		})
 
 	port := os.Getenv("GO_PORT")
 	if port == "" {
