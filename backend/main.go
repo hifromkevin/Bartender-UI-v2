@@ -36,10 +36,16 @@ func main() {
 		http.ServeFile(w, r, staticDir+"/index.html")
 	})
 
+	router.Get("/catchphrase/string", func(w http.ResponseWriter, r *http.Request) {
+		w.Header().Set("Content-Type", "text/plain")
+		w.WriteHeader(http.StatusOK)
+		w.Write([]byte("Mix smarter, drink better."))
+	})
+
 	router.Get("/catchphrase", func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Content-Type", "application/json")
 		w.WriteHeader(http.StatusOK)
-		w.Write([]byte(`{"catchphrase": "Mix smarter, drink better."}`))
+		w.Write([]byte(`{"catchphrase": "Mix smarter.", "byline": "Drink better."}`))
 	})
 
 	port := os.Getenv("GO_PORT")

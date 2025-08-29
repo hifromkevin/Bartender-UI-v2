@@ -2,16 +2,19 @@ import { useQuery } from '@tanstack/react-query';
 import { getRequest } from './api';
 
 export const useFetchCatchphrase = () => {
-  const { data, error, isError, isLoading } = useQuery<
-    { catchphrase: string },
-    {
-      message: string;
-      status: number;
-    }
-  >({
+  const { data, error, isError, isLoading } = useQuery<{
+    catchphrase: string;
+    byline: string;
+  }>({
     queryKey: ['catchphrase'],
-    queryFn: () => getRequest<{ catchphrase: string }>('catchphrase'),
+    queryFn: () => getRequest('catchphrase'),
   });
 
-  return { catchphrase: data?.catchphrase || '', error, isError, isLoading };
+  return {
+    catchphrase: data?.catchphrase || '',
+    byline: data?.byline || '',
+    error,
+    isError,
+    isLoading,
+  };
 };

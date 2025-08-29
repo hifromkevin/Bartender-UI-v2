@@ -5,6 +5,7 @@ import Cocktails from './features/Cocktails/Cocktails';
 import CocktailRecipe from './features/CocktailRecipe/CocktailRecipe';
 
 import { useFetchCatchphrase } from './hooks/useFetchCatchphrase';
+import { useFetchCatchphraseString } from './hooks/useFetchCatchphraseString';
 
 import logo from './assets/bartender-buddy-logo.png';
 
@@ -20,7 +21,8 @@ const App = () => {
   const [showCocktailRecipe, setShowCocktailRecipe] = useState<boolean>(false);
   // const [selectedCocktail, setSelectedCocktail] = useState<string | null>(null);
 
-  const { catchphrase } = useFetchCatchphrase();
+  const { catchphraseString } = useFetchCatchphraseString();
+  const { catchphrase, byline } = useFetchCatchphrase();
 
   useEffect(() => {
     if (isStationSelected) {
@@ -43,7 +45,10 @@ const App = () => {
     <div className={styles.appContainer}>
       <div className={styles.appHeader}>
         <img src={logo} alt="Bartender Buddy Logo" className={styles.logo} />
-        <p>{catchphrase && catchphrase}</p>
+        <p>
+          {catchphrase && byline ? `${catchphrase} ${byline} ` : ''}
+          {catchphraseString && catchphraseString}
+        </p>
       </div>
 
       <div

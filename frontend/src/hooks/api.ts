@@ -5,6 +5,13 @@ const getAxiosClient = () =>
     baseURL: process.env.REACT_API_BASE_URL,
   });
 
+export const getRequestString = async (URL: string): Promise<string> => {
+  const { data } = await getAxiosClient().get<string>(URL, {
+    responseType: 'text',
+  });
+  return data;
+};
+
 export const getRequest = async <T>(URL: string): Promise<T> => {
   const { data } = await getAxiosClient().get<T>(URL);
   return data;
