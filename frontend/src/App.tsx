@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react';
-import Stations from './features/Stations/Stations';
-import SelectedStation from './features/SelectedStation/SelectedStation';
-import Cocktails from './features/Cocktails/Cocktails';
-import CocktailRecipe from './features/CocktailRecipe/CocktailRecipe';
+import Stations from '@features/Stations/Stations';
+import SelectedStation from '@features/SelectedStation/SelectedStation';
+import Cocktails from '@features/Cocktails/Cocktails';
+import CocktailRecipe from '@features/CocktailRecipe/CocktailRecipe';
 
-import { useFetchCatchphrase } from './hooks/useFetchCatchphrase';
-import { useFetchCatchphraseString } from './hooks/useFetchCatchphraseString';
+import { useFetchCatchphrase } from '@hooks/useFetchCatchphrase';
+import { useFetchCatchphraseString } from '@hooks/useFetchCatchphraseString';
 
-import logo from './assets/bartender-buddy-logo.png';
+import logo from '@assets/bartender-buddy-logo.png';
 
 import styles from './App.module.scss';
 
@@ -22,7 +22,7 @@ const App = () => {
   // const [selectedCocktail, setSelectedCocktail] = useState<string | null>(null);
 
   const { catchphraseString } = useFetchCatchphraseString();
-  const { catchphrase } = useFetchCatchphrase();
+  const { catchphrase, catchphraseErrorisError } = useFetchCatchphrase();
 
   useEffect(() => {
     if (isStationSelected) {
@@ -46,13 +46,17 @@ const App = () => {
       <div className={styles.appHeader}>
         <img src={logo} alt="Bartender Buddy Logo" className={styles.logo} />
         <p>
-          {catchphrase?.map(
-            (item: { catchphrase: string; byline: string }, index: number) => (
-              <span key={index}>
-                {item.catchphrase} {item.byline}
-              </span>
-            )
-          )}
+          {!catchphraseErrorisError &&
+            catchphrase?.map(
+              (
+                item: { catchphrase: string; byline: string },
+                index: number
+              ) => (
+                <span key={index}>
+                  {item.catchphrase} {item.byline}
+                </span>
+              )
+            )}
           {catchphraseString && catchphraseString}
         </p>
       </div>

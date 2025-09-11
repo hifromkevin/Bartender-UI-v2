@@ -14,8 +14,8 @@ export const useFetchCatchphrase = () => {
 
   return {
     catchphrase: data || [],
-    error,
-    isError,
-    isLoading,
+    catchphraseError: error,
+    catchphraseErrorisError: isError,
+    catchphraseIsLoading: isLoading,
   };
 };
