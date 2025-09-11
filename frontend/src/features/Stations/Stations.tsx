@@ -2,8 +2,8 @@ import { useEffect, useState } from 'react';
 
 import { IStation, TStations } from '../../types/stationTypes';
 
-// import { arrow } from '../../assets/exportIcons';
-import ChevronLeft from '../../components/ChevronLeft/ChevronLeft';
+// import { arrow } from '@assets/exportIcons';
+import ChevronLeft from '@components/ChevronLeft/ChevronLeft';
 
 import styles from './styles/Stations.module.scss';
 

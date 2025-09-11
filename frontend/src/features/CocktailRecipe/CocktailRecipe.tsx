@@ -1,7 +1,7 @@
-import CloseButton from '../../components/CloseButton/CloseButton';
-import Tabs from '../../components/Tabs/Tabs';
+import CloseButton from '@components/CloseButton/CloseButton';
+import Tabs from '@components/Tabs/Tabs';
 
-import fakeCocktail from '../../assets/fakeCocktail.jpg';
+import fakeCocktail from '@assets/fakeCocktail.jpg';
 
 import styles from './styles/CocktailRecipe.module.scss';
 

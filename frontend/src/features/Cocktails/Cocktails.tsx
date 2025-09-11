@@ -1,5 +1,5 @@
-import fakeCocktail from '../../assets/fakeCocktail.jpg';
-import InfoIcon from '../../components/InfoIcon/InfoIcon';
+import fakeCocktail from '@assets/fakeCocktail.jpg';
+import InfoIcon from '@components/InfoIcon/InfoIcon';
 
 import styles from './styles/Cocktails.module.scss';
 

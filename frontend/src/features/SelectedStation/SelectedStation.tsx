@@ -1,6 +1,6 @@
-import CloseButton from '../../components/CloseButton/CloseButton';
+import CloseButton from '@components/CloseButton/CloseButton';
 
-import fakeMixer from '../../assets/fakeMixer.jpg';
+import fakeMixer from '@assets/fakeMixer.jpg';
 
 import styles from './styles/SelectedStation.module.scss';
 
