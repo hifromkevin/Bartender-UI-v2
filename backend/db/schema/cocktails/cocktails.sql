@@ -4,5 +4,7 @@ CREATE TABLE IF NOT EXISTS cocktails (
     description TEXT,
     is_alcoholic BOOLEAN NOT NULL,
     image_url TEXT,
-    last_used_at TIMESTAMP
+    requires_shaker BOOLEAN NOT NULL,
+    glass_id TEXT,
+    FOREIGN KEY (glass_id) REFERENCES glass_types(id)
 );

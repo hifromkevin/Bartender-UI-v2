@@ -1,6 +1,7 @@
 CREATE TABLE IF NOT EXISTS cocktail_tools (
-    id TEXT PRIMARY KEY DEFAULT (lower(hex(randomblob(16)))),
-    name TEXT NOT NULL,
-    type TEXT,
-    image_url TEXT
+    cocktail_id TEXT NOT NULL,
+    tool_id TEXT NOT NULL,
+    PRIMARY KEY (cocktail_id, tool_id),
+    FOREIGN KEY (cocktail_id) REFERENCES cocktails(id) ON DELETE CASCADE,
+    FOREIGN KEY (tool_id) REFERENCES tools(id) ON DELETE CASCADE
 );
