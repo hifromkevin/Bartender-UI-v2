@@ -1,7 +1,7 @@
 package types
 
-type Tools struct {
-	Id       string `json:"id"`
-	Name     string `json:"name"`
-	ImageUrl string `json:"image_url"`
+type Tool struct {
+	ID       string `db:"id" json:"id"`
+	Name     string `db:"name" json:"name"`
+	ImageURL string `db:"image_url" json:"image_url"`
 }

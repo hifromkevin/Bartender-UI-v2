@@ -1,6 +1,6 @@
 package types
 
-type Flavor struct {
+type FlavorDescriptor struct {
 	ID   string `db:"id" json:"id"`
 	Name string `db:"name" json:"name"`
 }
