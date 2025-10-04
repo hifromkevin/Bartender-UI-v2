@@ -1,1 +1,0 @@
-// { id: uuid(), cocktailId: uuid(), toolId: uuid() }

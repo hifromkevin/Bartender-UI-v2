@@ -1,0 +1,4 @@
+CREATE TABLE ingredient_quality (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL UNIQUE
+);
