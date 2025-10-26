@@ -1,38 +1,67 @@
 package types
 
-import (
-	"time"
-)
-
 type Ingredient struct {
-	ID               string  `json:"id"`
-	IngredientTypeID string  `json:"ingredient_type_id"`
-	FlavorID         string  `json:"flavor_id"`
-	Brand            string  `json:"brand"`
-	DescriptiveName  string  `json:"descriptive_name"`
-	ImageURL         string  `json:"image_url"`
-	IsAlcoholic      bool    `json:"is_alcoholic"`
-	IsOrganic        bool    `json:"is_organic"`
-	IsSeasonal       bool    `json:"is_seasonal"`
-	QualityTier      *int    `json:"quality_tier"`
-	Season           *string `json:"season"`
+	ID                 string  `db:"id" json:"id"`
+	IngredientTypeID   string  `db:"ingredient_type_id" json:"ingredient_type_id"`
+	FlavorID           *string `db:"flavor_id" json:"flavor_id"`
+	FlavorDescriptorID *string `db:"flavor_descriptor_id" json:"flavor_descriptor_id"`
+	StyleID            *string `db:"style_id" json:"style_id"`
+	BrandID            *string `db:"brand_id" json:"brand_id"`
+	DescriptiveName    string  `db:"descriptive_name" json:"descriptive_name"`
+	IceType            *string `db:"ice_type" json:"ice_type"`
+	ImageURL           string  `db:"image_url" json:"image_url"`
+	IsAlcoholic        bool    `db:"is_alcoholic" json:"is_alcoholic"`
+	IsOrganic          bool    `db:"is_organic" json:"is_organic"`
+	IsSeasonal         bool    `db:"is_seasonal" json:"is_seasonal"`
+	QualityID          string  `db:"quality_id" json:"quality_id"` // 'base', 'premium', 'ultra', 'other'
+	SeasonID           *string `db:"season_id" json:"season_id"`
 }
 
-type IngredientUsage struct {
-	ID               string    `json:"id"`
-	IngredientID     string    `json:"ingredient_id"`
-	IngredientAmount float64   `json:"ingredient_amount"`
-	UnitOfMeasure    string    `json:"unit_of_measure"`
-	UsedAt           time.Time `json:"used_at"`
+type IngredientType struct {
+	ID   string `db:"id" json:"id"`
+	Name string `db:"name" json:"name"`
 }
 
-type IngredientTypes struct {
-	ID      string `json:"id"`
-	Name    string `json:"name"`
-	GroupID string `json:"group_id"`
+type IngredientGroup struct {
+	ID   string `db:"id" json:"id"`
+	Name string `db:"name" json:"name"`
 }
 
-type IngredientGroups struct {
-	ID   string `json:"id"`
-	Name string `json:"name"`
+type IngredientBrand struct {
+	ID   string `db:"id" json:"id"`
+	Name string `db:"name" json:"name"`
+}
+
+type IngredientStyle struct {
+	ID   string `db:"id" json:"id"`
+	Name string `db:"name" json:"name"`
+}
+
+type IngredientFlavor struct {
+	ID   string `db:"id" json:"id"`
+	Name string `db:"name" json:"name"`
+}
+
+type IngredientFlavorDescriptor struct {
+	ID   string `db:"id" json:"id"`
+	Name string `db:"name" json:"name"`
+}
+
+type IngredientQuality struct {
+	ID   string `db:"id" json:"id"`
+	Name string `db:"name" json:"name"`
+}
+
+type IngredientSeed struct {
+	IngredientType   string
+	Flavor           *string
+	FlavorDescriptor *string
+	Style            *string
+	Brand            *string
+	ImageURL         string
+	IsAlcoholic      bool
+	IsOrganic        bool
+	IsSeasonal       bool
+	Quality          *string
+	Season           *string
 }
