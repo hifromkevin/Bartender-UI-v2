@@ -7,14 +7,17 @@ import (
 
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/chi/v5/middleware"
+
+	"bartender-backend/internal/db"
 )
 
 func enableCORS(next http.Handler) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Access-Control-Allow-Origin", "*")
-		w.Header().Set("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
-		w.Header().Set("Access-Control-Allow-Headers", "Content-Type")
-		if r.Method == "OPTIONS" {
+		w.Header().Set("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS")
+		w.Header().Set("Access-Control-Allow-Headers", "Content-Type, Authorization")
+		if r.Method == http.MethodOptions {
+			w.WriteHeader(http.StatusOK)
 			return
 		}
 		next.ServeHTTP(w, r)
@@ -22,8 +25,13 @@ func enableCORS(next http.Handler) http.Handler {
 }
 
 func main() {
-	router := chi.NewRouter()
+	database, err := db.Connect("./bartender.db")
+	if err != nil {
+		log.Fatalf("Failed to connect to database: %v", err)
+	}
+	defer database.Close()
 
+	router := chi.NewRouter()
 	router.Use(middleware.Logger)
 	router.Use(enableCORS)
 
@@ -34,6 +42,17 @@ func main() {
 
 	router.Get("/", func(w http.ResponseWriter, r *http.Request) {
 		http.ServeFile(w, r, staticDir+"/index.html")
+	})
+
+	// Example route that uses the DB connection
+	router.Get("/catchphrase/db", func(w http.ResponseWriter, r *http.Request) {
+		row := database.QueryRow("SELECT 'Mix smarter, drink better.'")
+		var phrase string
+		_ = row.Scan(&phrase)
+
+		w.Header().Set("Content-Type", "text/plain")
+		w.WriteHeader(http.StatusOK)
+		w.Write([]byte(phrase))
 	})
 
 	router.Get("/catchphrase/string", func(w http.ResponseWriter, r *http.Request) {
@@ -49,7 +68,7 @@ func main() {
 		{"catchphrase": "Mix smarter.", "byline": "Drink better."},
 		{"catchphrase": "Shake it up!", "byline": "Enjoy responsibly."}
 	]`))
-		})
+	})
 
 	port := os.Getenv("GO_PORT")
 	if port == "" {

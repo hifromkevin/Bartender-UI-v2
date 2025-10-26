@@ -38,13 +38,12 @@ var dataSets = map[string][]SeedRow{
 		{"Name": "Gold"},
 		{"Name": "Aged"},
 		{"Name": "Overproof"},
-		{"Name": "Rye"},
-		{"Name": "Irish"},
-		{"Name": "Blue"},
-		{"Name": "Green"},
-		{"Name": "Orange"},
-		{"Name": "Dry"},
-		{"Name": "Sweet"},
+	},
+	"seasons": {
+		{"Name": "Winter"},
+		{"Name": "Spring"},
+		{"Name": "Summer"},
+		{"Name": "Fall"},
 	},
 }
 
