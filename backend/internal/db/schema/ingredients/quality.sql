@@ -1,4 +1,4 @@
-CREATE TABLE ingredient_quality (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
+CREATE TABLE IF NOT EXISTS ingredient_quality (
+    id INTEGER PRIMARY KEY,
     name TEXT NOT NULL UNIQUE
 );

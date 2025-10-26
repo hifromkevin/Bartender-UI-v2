@@ -1,5 +1,5 @@
 CREATE TABLE IF NOT EXISTS cocktails (
-    id TEXT PRIMARY KEY DEFAULT (lower(hex(randomblob(16)))),
+    id TEXT PRIMARY KEY,
     name TEXT NOT NULL,
     description TEXT,
     is_alcoholic BOOLEAN NOT NULL,

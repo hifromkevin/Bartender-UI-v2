@@ -1,0 +1,4 @@
+CREATE TABLE IF NOT EXISTS ingredient_brands (
+id TEXT PRIMARY KEY,
+    name TEXT NOT NULL UNIQUE
+);
