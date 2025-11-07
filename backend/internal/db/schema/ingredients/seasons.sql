@@ -1,4 +1,4 @@
 CREATE TABLE seasons (
  id TEXT PRIMARY KEY,
-     name TEXT NOT NULL UNIQUE
+ name TEXT NOT NULL UNIQUE
 );

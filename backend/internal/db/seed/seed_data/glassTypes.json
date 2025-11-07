@@ -1,0 +1,222 @@
+[
+  {
+    "id": "1c5719a9-ee21-4a5a-a3d4-9a8a361bff6c",
+    "image_url": "/images/glass_types/beer_mug.jpg",
+    "name": "Beer Mug"
+  },
+  {
+    "id": "77d71313-8083-4996-97bb-22a334fdddbe",
+    "image_url": "/images/glass_types/brandy_snifter.jpg",
+    "name": "Brandy Snifter"
+  },
+  {
+    "id": "5094a574-7000-4d48-8526-8403215d97f5",
+    "image_url": "/images/glass_types/carafe.jpg",
+    "name": "Carafe"
+  },
+  {
+    "id": "25c37cfa-3900-48f8-a46f-e4ad811c9231",
+    "image_url": "/images/glass_types/champagne_glass.jpg",
+    "name": "Champagne Glass"
+  },
+  {
+    "id": "8f21549d-784a-4c4d-a411-30deb60f35fb",
+    "image_url": "/images/glass_types/collins.jpg",
+    "name": "Collins"
+  },
+  {
+    "id": "4b5dc981-6396-4f4f-ad4a-b7f3a29bb2f3",
+    "image_url": "/images/glass_types/coupe.jpg",
+    "name": "Coupe"
+  },
+  {
+    "id": "97dd3c66-3fd9-4e90-a324-0417c4015058",
+    "image_url": "/images/glass_types/copper_mug.jpg",
+    "name": "Copper Mug"
+  },
+  {
+    "id": "06f7e9cc-7577-490a-b240-ee57a30d02e6",
+    "image_url": "/images/glass_types/double_old_fashioned.jpg",
+    "name": "Double Old Fashioned"
+  },
+  {
+    "id": "f711316f-2932-4bcb-b8dd-5d90be51d92d",
+    "image_url": "/images/glass_types/double_rocks.jpg",
+    "name": "Double Rocks"
+  },
+  {
+    "id": "7e12b7bb-3839-4cf5-8132-645cc1e379ff",
+    "image_url": "/images/glass_types/diver_glass.jpg",
+    "name": "Diver Glass"
+  },
+  {
+    "id": "98bd961d-dd52-4148-86d9-7a5b096514a0",
+    "image_url": "/images/glass_types/flagon.jpg",
+    "name": "Flagon"
+  },
+  {
+    "id": "b5757ae2-edf2-424c-919f-453612985069",
+    "image_url": "/images/glass_types/flared.jpg",
+    "name": "Flared"
+  },
+  {
+    "id": "60f421e1-449e-4c69-84b0-8d5cce4dbd49",
+    "image_url": "/images/glass_types/flared_highball.jpg",
+    "name": "Flared Highball"
+  },
+  {
+    "id": "9fbd5a7e-5a3f-44b5-9d42-a8d1f3a91565",
+    "image_url": "/images/glass_types/flared_rocks.jpg",
+    "name": "Flared Rocks"
+  },
+  {
+    "id": "e96bc7da-203d-4add-8284-c888c0599439",
+    "image_url": "/images/glass_types/flared_shot.jpg",
+    "name": "Flared Shot"
+  },
+  {
+    "id": "26777ad8-fcd4-4c11-a899-133a7fe714b5",
+    "image_url": "/images/glass_types/flared_shot_glass.jpg",
+    "name": "Flared Shot Glass"
+  },
+  {
+    "id": "324970d9-efc7-463b-aa71-75e20157a621",
+    "image_url": "/images/glass_types/flute.jpg",
+    "name": "Flute"
+  },
+  {
+    "id": "12efdb06-ef7f-4334-8294-a59ba2c17403",
+    "image_url": "/images/glass_types/highball.jpg",
+    "name": "Highball"
+  },
+  {
+    "id": "17fa3256-78bb-4d69-8e35-ea2bb0b0b85b",
+    "image_url": "/images/glass_types/julep.jpg",
+    "name": "Julep"
+  },
+  {
+    "id": "153c39da-cb16-42e3-9c25-3d688b0d63b5",
+    "image_url": "/images/glass_types/martini.jpg",
+    "name": "Martini"
+  },
+  {
+    "id": "77280308-f5d9-4154-9c8a-86331acc39f6",
+    "image_url": "/images/glass_types/mason_jar.jpg",
+    "name": "Mason Jar"
+  },
+  {
+    "id": "0122ece7-f3ae-4dff-9b4e-77efc885bc0f",
+    "image_url": "/images/glass_types/mezcal.jpg",
+    "name": "Mezcal"
+  },
+  {
+    "id": "66f730eb-d2f9-402e-95f4-67fb6e62b45e",
+    "image_url": "/images/glass_types/mini_coupe.jpg",
+    "name": "Mini Coupe"
+  },
+  {
+    "id": "65aa39d3-64fb-4d94-bac7-2c579eccfb17",
+    "image_url": "/images/glass_types/nick_and_nora.jpg",
+    "name": "Nick and Nora"
+  },
+  {
+    "id": "72706eba-d2df-47f1-ad59-7bbaa65133e1",
+    "image_url": "/images/glass_types/old_fashioned.jpg",
+    "name": "Old Fashioned"
+  },
+  {
+    "id": "09c57ebf-9bd2-4127-a72d-71563dd377af",
+    "image_url": "/images/glass_types/rocks.jpg",
+    "name": "Rocks"
+  },
+  {
+    "id": "434a2380-4091-409a-98b8-1d25a18fda4b",
+    "image_url": "/images/glass_types/shot.jpg",
+    "name": "Shot"
+  },
+  {
+    "id": "d5167eb0-eb2d-4373-9d69-7cbed1c72ea2",
+    "image_url": "/images/glass_types/shot_glass.jpg",
+    "name": "Shot Glass"
+  },
+  {
+    "id": "b3cb5f40-6f9d-4b45-8ac0-4c532ab75d65",
+    "image_url": "/images/glass_types/sour_glass.jpg",
+    "name": "Sour Glass"
+  },
+  {
+    "id": "03d3ee0a-3e46-49b1-ac50-d3b0559db3ad",
+    "image_url": "/images/glass_types/snifter.jpg",
+    "name": "Snifter"
+  },
+  {
+    "id": "cd70454b-70bc-4bc5-a6f9-9d4f5bf54fb2",
+    "image_url": "/images/glass_types/tiki.jpg",
+    "name": "Tiki"
+  },
+  {
+    "id": "eba0d3f9-e6dc-4f6b-95c4-125e61767d52",
+    "image_url": "/images/glass_types/tot.jpg",
+    "name": "Tot"
+  },
+  {
+    "id": "06c06846-36f5-4b63-b8a8-27e25e660388",
+    "image_url": "/images/glass_types/wine.jpg",
+    "name": "Wine"
+  },
+  {
+    "id": "e5fac75d-32ce-4990-ae63-16e26d8fd2a3",
+    "image_url": "/images/glass_types/pousse_cafe_glass.jpg",
+    "name": "Pousse Cafe Glass"
+  },
+  {
+    "id": "7c16032a-df72-4e28-98f8-7f7d25017b0c",
+    "image_url": "/images/glass_types/hurricane_glass.jpg",
+    "name": "Hurricane Glass"
+  },
+  {
+    "id": "a444c3d9-7757-447a-b72b-bf12d4fa6cf9",
+    "image_url": "/images/glass_types/coffee_mug.jpg",
+    "name": "Coffee Mug"
+  },
+  {
+    "id": "c371d4c3-fddf-437c-a421-69ae6f63df20",
+    "image_url": "/images/glass_types/jar.jpg",
+    "name": "Jar"
+  },
+  {
+    "id": "e06df800-0c28-4236-8c87-28c3a180ebc1",
+    "image_url": "/images/glass_types/irish_coffee_cup.jpg",
+    "name": "Irish Coffee Cup"
+  },
+  {
+    "id": "0896372d-2782-4feb-9945-c7b37ef0b139",
+    "image_url": "/images/glass_types/punch_bowl.jpg",
+    "name": "Punch Bowl"
+  },
+  {
+    "id": "3366ab1c-ccb8-4f37-919e-ca64e87ab9d7",
+    "image_url": "/images/glass_types/pitcher.jpg",
+    "name": "Pitcher"
+  },
+  {
+    "id": "0a33b624-8598-4690-a7e9-e29f9d3ed6ee",
+    "image_url": "/images/glass_types/pint_glass.jpg",
+    "name": "Pint Glass"
+  },
+  {
+    "id": "586bb89b-fe50-41c5-b331-4aef634dbe8b",
+    "image_url": "/images/glass_types/cordial_glass.jpg",
+    "name": "Cordial Glass"
+  },
+  {
+    "id": "84b11170-5872-495f-916f-ad2d6b09e5d3",
+    "image_url": "/images/glass_types/margarita_glass.jpg",
+    "name": "Margarita Glass"
+  },
+  {
+    "id": "b3285563-a197-4e53-9b77-c8412fe30557",
+    "image_url": "/images/glass_types/balloon_glass.jpg",
+    "name": "Balloon Glass"
+  }
+]

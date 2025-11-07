@@ -1,0 +1,34 @@
+[
+  {
+    "id": "60ecc42c-69bc-4116-bf93-b12137de9623",
+    "name": "Sweet"
+  },
+  {
+    "id": "70748bea-73d7-4a93-b963-ab26e6d714e8",
+    "name": "Sour"
+  },
+  {
+    "id": "4e0fcbc4-6c10-48f3-badd-d498f78bd3a5",
+    "name": "Bitter"
+  },
+  {
+    "id": "deda9f5c-e0c2-4e42-823b-ff3fe24ce263",
+    "name": "Spicy"
+  },
+  {
+    "id": "e6df7855-59a9-4678-a590-e3d3fe7bd5b1",
+    "name": "Spiced"
+  },
+  {
+    "id": "c4bd694a-7086-4749-a38a-2662a56ca9b0",
+    "name": "Smokey"
+  },
+  {
+    "id": "475d28cc-dcf5-4d55-b42d-ad592afd7d3c",
+    "name": "Toasted"
+  },
+  {
+    "id": "9e640741-4012-4888-a937-ef4b0fed2c3b",
+    "name": "Salted"
+  }
+]

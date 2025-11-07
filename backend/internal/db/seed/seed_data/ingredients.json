@@ -1,0 +1,28 @@
+[
+  {
+    "ingredient_type": "Liqueur",
+    "flavor": "Pear",
+    "flavor_descriptor": "Spiced",
+    "style": "Premium",
+    "brand": "St. George",
+    "image_url": "/images/stgeorge_spiced_pear.jpg",
+    "is_alcoholic": true,
+    "is_organic": false,
+    "is_seasonal": false,
+    "quality": "Premium",
+    "season": null
+  },
+  {
+    "ingredient_type": "Vodka",
+    "flavor": null,
+    "flavor_descriptor": null,
+    "style": null,
+    "brand": null,
+    "image_url": "/images/vodka.jpg",
+    "is_alcoholic": true,
+    "is_organic": false,
+    "is_seasonal": false,
+    "quality": "Base",
+    "season": null
+  }
+]

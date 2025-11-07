@@ -53,15 +53,15 @@ type IngredientQuality struct {
 }
 
 type IngredientSeed struct {
-	IngredientType   string
-	Flavor           *string
-	FlavorDescriptor *string
-	Style            *string
-	Brand            *string
-	ImageURL         string
-	IsAlcoholic      bool
-	IsOrganic        bool
-	IsSeasonal       bool
-	Quality          *string
-	Season           *string
+	IngredientType   string  `json:"ingredient_type"`
+	Flavor           *string `json:"flavor,omitempty"`
+	FlavorDescriptor *string `json:"flavor_descriptor,omitempty"`
+	Style            *string `json:"style,omitempty"`
+	Brand            *string `json:"brand,omitempty"`
+	ImageURL         string  `json:"image_url"`
+	IsAlcoholic      bool    `json:"is_alcoholic"`
+	IsOrganic        bool    `json:"is_organic"`
+	IsSeasonal       bool    `json:"is_seasonal"`
+	Quality          *string `json:"quality,omitempty"`
+	Season           *string `json:"season,omitempty"`
 }

@@ -1,0 +1,226 @@
+[
+  {
+    "id": "d21cc659-73e3-46e5-91b8-4a6e74b3a37a",
+    "name": "Almond"
+  },
+  {
+    "id": "061eeea2-6dab-4421-b9dd-5d43879e32fd",
+    "name": "Apple"
+  },
+  {
+    "id": "2204ec33-6ef4-4911-9334-0a480116465f",
+    "name": "Apricot"
+  },
+  {
+    "id": "f3e1029a-a58e-4f8c-ba5e-5a3298244e0a",
+    "name": "Banana"
+  },
+  {
+    "id": "d9a90ced-ea77-4871-bf0a-a2c5efdf81ca",
+    "name": "Birthday Cake"
+  },
+  {
+    "id": "5546aae2-cf26-4582-b11d-24e45f514e69",
+    "name": "Blackberry"
+  },
+  {
+    "id": "9e5d9e6a-0ca9-466f-b2fa-f7d36e537e92",
+    "name": "Blueberry"
+  },
+  {
+    "id": "61d78b2e-fed0-4e26-aae6-c745bfff0d93",
+    "name": "Brown Sugar"
+  },
+  {
+    "id": "354421a3-8f78-4e77-9c3d-d4f9d3b319f0",
+    "name": "Butterscotch"
+  },
+  {
+    "id": "1d592049-aead-4562-b17f-00d33eda5ad6",
+    "name": "Caramel"
+  },
+  {
+    "id": "b754b9a6-9b5a-481b-8d9e-d7671aa1c66a",
+    "name": "Celery"
+  },
+  {
+    "id": "0910ace2-3fad-4f81-a89b-1bdd00d98311",
+    "name": "Cherry"
+  },
+  {
+    "id": "151ec488-9da2-4e08-a2e1-b9184fb713b4",
+    "name": "Chile"
+  },
+  {
+    "id": "61c62879-cfcb-4cd7-a4f0-b5feef83abd7",
+    "name": "Chocolate"
+  },
+  {
+    "id": "260161c3-d5cf-4290-a394-8ea136f7dc04",
+    "name": "Cinnamon"
+  },
+  {
+    "id": "d4fe3514-57c2-4ee3-bab4-b5b548d4d89b",
+    "name": "Citrus"
+  },
+  {
+    "id": "e2fdc92e-4b1f-43d7-b498-0a2235f69fd1",
+    "name": "Coffee"
+  },
+  {
+    "id": "6514b991-4091-4706-809f-e81ae161cfff",
+    "name": "Cranberry"
+  },
+  {
+    "id": "8d88a6ce-73fb-4f48-8f58-1ab8e922a97f",
+    "name": "Cucumber"
+  },
+  {
+    "id": "4b44837f-f52b-42cd-b9da-32efad8d92f6",
+    "name": "Dragon Berry"
+  },
+  {
+    "id": "9d55227a-fd58-4892-b0f9-fff7e5a5805c",
+    "name": "Dragonfruit"
+  },
+  {
+    "id": "42f9921f-101b-45eb-bb72-20e70cd99cf5",
+    "name": "Elderflower"
+  },
+  {
+    "id": "864a5317-e93f-499e-9488-c968d440f251",
+    "name": "Fig"
+  },
+  {
+    "id": "fa251ddc-8113-4fbe-b22c-ddabba6ffe0b",
+    "name": "Grape"
+  },
+  {
+    "id": "701d9815-6280-476f-8cb4-64a3df52a610",
+    "name": "Grapefruit"
+  },
+  {
+    "id": "d92ade1e-01f7-435d-9091-4fa0e8f99ac9",
+    "name": "Hazelnut"
+  },
+  {
+    "id": "2995775f-7573-4c38-9fbc-8f88ec152fa6",
+    "name": "Irish Cream"
+  },
+  {
+    "id": "046e3895-ef04-4062-ab78-f2752626f0c4",
+    "name": "Jalapeño"
+  },
+  {
+    "id": "d3a19213-b09b-4707-be53-10110cd5203f",
+    "name": "Kiwi"
+  },
+  {
+    "id": "17aea73b-cc67-499c-8baa-0e10fe855062",
+    "name": "Lemon"
+  },
+  {
+    "id": "a03a657d-8d29-4b1d-9475-67639adc5a4d",
+    "name": "Lemonade"
+  },
+  {
+    "id": "201e66e2-94a1-4bcb-80b7-3398ce733720",
+    "name": "Licorice"
+  },
+  {
+    "id": "6c197e27-bdac-450b-81ce-cf34d76f20ef",
+    "name": "Lime"
+  },
+  {
+    "id": "077540bd-dc79-4c3f-b5f7-9cdc8b668441",
+    "name": "Lychee"
+  },
+  {
+    "id": "5cef7398-70c6-4253-a7cb-610fc516b24c",
+    "name": "Mango"
+  },
+  {
+    "id": "d5e94873-6db0-492c-9693-2aed7dc57ba6",
+    "name": "Maple"
+  },
+  {
+    "id": "d75b264b-275c-4ec8-afbd-a93e13e1de4c",
+    "name": "Melon"
+  },
+  {
+    "id": "1bb04ac5-ef0e-46a0-b49e-8dd9e69a1063",
+    "name": "Orange"
+  },
+  {
+    "id": "fe9a5147-76a7-40c9-ba3e-0283b6abf143",
+    "name": "Passionfruit"
+  },
+  {
+    "id": "74c91c07-5977-4f00-80e3-e4e90a53134d",
+    "name": "Peach"
+  },
+  {
+    "id": "a9ae7d3c-e0aa-4eab-8b6b-8d0b6061d1b5",
+    "name": "Peanut Butter"
+  },
+  {
+    "id": "d93ccd4f-ae75-4719-86e4-6f9f36d4cad4",
+    "name": "Pear"
+  },
+  {
+    "id": "ce289c84-0498-4718-a48e-faf64dfbff28",
+    "name": "Pecan"
+  },
+  {
+    "id": "7c3e1733-0bc2-4ddc-acd0-8e79032032d1",
+    "name": "Peppermint"
+  },
+  {
+    "id": "8625a762-e20a-477a-911c-54e2d7b14832",
+    "name": "Pineapple"
+  },
+  {
+    "id": "a1038dfc-2dbe-43cb-ab9d-cf960c62f640",
+    "name": "Plum"
+  },
+  {
+    "id": "5967771d-47ae-4a5c-bdce-c245bf4ff567",
+    "name": "Pumpkin Spice"
+  },
+  {
+    "id": "643e390b-9155-4df3-984c-68ee9a3ffe8b",
+    "name": "Quince"
+  },
+  {
+    "id": "f8dfe4ff-e776-42eb-9d73-51ad62b68cd6",
+    "name": "Raspberry"
+  },
+  {
+    "id": "9a6cd444-a783-45cb-a147-ac52ba8290a3",
+    "name": "Strawberry"
+  },
+  {
+    "id": "d8a2898c-2c59-4929-a6f3-d9a3df63ae21",
+    "name": "Tamarind"
+  },
+  {
+    "id": "411a4f54-511f-4590-bdd0-662e20d5debe",
+    "name": "Toasted"
+  },
+  {
+    "id": "03bb5c1f-a2c7-43d6-92e6-691e89e69142",
+    "name": "Tomato"
+  },
+  {
+    "id": "55358c6c-2f72-4b5f-a19a-f3fb8627afc3",
+    "name": "Tropical"
+  },
+  {
+    "id": "2012753c-6304-438c-9371-2a78af1d57bd",
+    "name": "Watermelon"
+  },
+  {
+    "id": "3dfba88e-699f-4fa2-9f0a-e324ac644021",
+    "name": "Whipped Cream"
+  }
+]
