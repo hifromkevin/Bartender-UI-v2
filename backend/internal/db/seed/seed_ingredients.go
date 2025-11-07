@@ -36,13 +36,13 @@ func insertIngredient(
 	item types.IngredientSeed,
 	lookups map[string]map[string]string,
 ) error {
-	ingredientTypes := lookups["IngredientTypes"]
-	flavors := lookups["Flavors"]
-	descriptors := lookups["Descriptors"]
-	styles := lookups["Styles"]
-	brands := lookups["Brands"]
-	qualities := lookups["Qualities"]
-	seasons := lookups["Seasons"]
+	ingredientTypes := lookups["ingredient_types"]
+	flavors := lookups["ingredient_flavors"]
+	descriptors := lookups["flavor_descriptors"]
+	styles := lookups["ingredient_styles"]
+	brands := lookups["ingredient_brands"]
+	qualities := lookups["ingredient_quality"]
+	seasons := lookups["seasons"]
 
 	ingredientTypeID, ok := ingredientTypes[item.IngredientType]
 	if !ok {
@@ -87,8 +87,14 @@ func insertIngredient(
 
 func SeedIngredients(db *sql.DB, atomic bool, jsonPath string) error {
 	lookups, err := helpers.LoadLookupMaps(db, []string{
-		"IngredientTypes", "Flavors", "Descriptors", "Styles",
-		"Brands", "Qualities", "Seasons",
+		"ingredient_types",
+		"ingredient_flavors",
+		"flavor_descriptors",
+		"ingredient_styles",
+		"ingredient_brands",
+		"ingredient_quality",
+		"seasons",
+
 	})
 	if err != nil {
 		return fmt.Errorf("\033[31m❌ failed to load lookup maps: %v \033[0m", err)
