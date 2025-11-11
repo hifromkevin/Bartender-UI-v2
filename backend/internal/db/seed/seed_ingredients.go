@@ -15,7 +15,7 @@ const insertIngredientSQL = `
     INSERT INTO ingredients (
         id,
         ingredient_type_id,
-        flavor_id,
+        flavor_ids,
         flavor_descriptor_id,
         style_id,
         brand_id,
@@ -37,7 +37,6 @@ func insertIngredient(
 	lookups map[string]map[string]string,
 ) error {
 	ingredientTypes := lookups["ingredient_types"]
-	flavors := lookups["ingredient_flavors"]
 	descriptors := lookups["flavor_descriptors"]
 	styles := lookups["ingredient_styles"]
 	brands := lookups["ingredient_brands"]
@@ -50,13 +49,22 @@ func insertIngredient(
 	}
 
 	foreignKeys := map[string]*string{
-		"flavor_id":            helpers.SafeLookup(flavors, item.Flavor),
 		"flavor_descriptor_id": helpers.SafeLookup(descriptors, item.FlavorDescriptor),
 		"style_id":             helpers.SafeLookup(styles, item.Style),
 		"brand_id":             helpers.SafeLookup(brands, item.Brand),
 		"quality_id":           helpers.SafeLookup(qualities, item.Quality, "Base"),
 		"season_id":            helpers.SafeLookup(seasons, item.Season),
 	}
+
+	var flavorIds *string
+	if len(item.FlavorIDs) > 0 {
+		flavor, err := json.Marshal(item.FlavorIDs)
+		if err != nil {
+			return fmt.Errorf("failed to marshal flavor IDs: %w", err)
+		}
+		flavorIds = helpers.Pointer(string(flavor))
+	}
+
 
 	descriptiveName := helpers.MakeDescriptiveName(
 		item.Brand,
@@ -69,7 +77,7 @@ func insertIngredient(
 	_, err := exec.Exec(insertIngredientSQL,
 		uuid.New().String(),
 		ingredientTypeID,
-		foreignKeys["flavor_id"],
+		flavorIds,
 		foreignKeys["flavor_descriptor_id"],
 		foreignKeys["style_id"],
 		foreignKeys["brand_id"],

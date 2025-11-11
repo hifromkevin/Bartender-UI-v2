@@ -1,7 +1,7 @@
 [
   {
     "ingredient_type": "Liqueur",
-    "flavor": "Pear",
+    "flavor": ["Pear"],
     "flavor_descriptor": "Spiced",
     "style": "Premium",
     "brand": "St. George",

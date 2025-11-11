@@ -3,7 +3,7 @@ package types
 type Ingredient struct {
 	ID                 string  `db:"id" json:"id"`
 	IngredientTypeID   string  `db:"ingredient_type_id" json:"ingredient_type_id"`
-	FlavorID           *string `db:"flavor_id" json:"flavor_id"`
+	FlavorIDs          []string `db:"flavor_ids" json:"flavor_ids"`
 	FlavorDescriptorID *string `db:"flavor_descriptor_id" json:"flavor_descriptor_id"`
 	StyleID            *string `db:"style_id" json:"style_id"`
 	BrandID            *string `db:"brand_id" json:"brand_id"`
@@ -54,7 +54,7 @@ type IngredientQuality struct {
 
 type IngredientSeed struct {
 	IngredientType   string  `json:"ingredient_type"`
-	Flavor           *string `json:"flavor,omitempty"`
+	FlavorIDs        []string `json:"flavor_ids,omitempty"`
 	FlavorDescriptor *string `json:"flavor_descriptor,omitempty"`
 	Style            *string `json:"style,omitempty"`
 	Brand            *string `json:"brand,omitempty"`
